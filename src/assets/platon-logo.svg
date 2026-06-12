@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!-- Octahedron / platonic solid mark -->
+  <g stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+    <polygon points="40,8 70,40 40,72 10,40" fill="none"/>
+    <line x1="10" y1="40" x2="70" y2="40"/>
+    <line x1="40" y1="8" x2="40" y2="72"/>
+    <polygon points="40,24 56,40 40,56 24,40" fill="currentColor" fill-opacity="0.12"/>
+  </g>
+</svg>
