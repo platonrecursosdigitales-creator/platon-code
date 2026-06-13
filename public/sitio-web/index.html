@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sitio web profesional desde $1,700 MXN | Platon Code</title>
+<meta name="description" content="Creamos tu sitio web profesional desde $1,700 MXN. Incluye dominio .com/.mx, hosting 1 año, Google Maps, versión móvil, redes sociales y contacto directo. Listo en 48 horas." />
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; }
+  .font-display { font-family: 'Space Grotesk', sans-serif; }
+  .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+  /* Marquee */
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee { animation: marquee 28s linear infinite; }
+  .animate-marquee-slow { animation: marquee 30s linear infinite; }
+
+  /* Fade up */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .reveal { opacity: 0; }
+  .reveal.in-view { animation: fadeUp .7s cubic-bezier(.22,1,.36,1) forwards; }
+
+  /* Scale in */
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(.92); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  .scale-reveal { opacity: 0; }
+  .scale-reveal.in-view { animation: scaleIn .9s cubic-bezier(.22,1,.36,1) forwards; }
+
+  /* Brand chip hover */
+  .brand-chip { transition: transform .25s cubic-bezier(.22,1,.36,1), box-shadow .25s ease; }
+  .brand-chip:hover { transform: scale(1.12) rotate(-4deg); box-shadow: 6px 6px 0 0 #000; }
+  .brand-chip:nth-child(even):hover { transform: scale(1.12) rotate(4deg); }
+
+  /* Persistent CTA morph */
+  .cta-persistent {
+    transition: width .45s cubic-bezier(.22,1,.36,1), box-shadow .25s ease;
+    width: 268px;
+  }
+  .cta-persistent.shrunk { width: 64px; }
+  .cta-persistent .label {
+    transition: opacity .3s ease, max-width .45s cubic-bezier(.22,1,.36,1);
+    max-width: 220px;
+    overflow: hidden;
+  }
+  .cta-persistent.shrunk .label { opacity: 0; max-width: 0; }
+  .cta-persistent:hover { box-shadow: 8px 8px 0 0 #000; }
+
+  /* Selection */
+  ::selection { background: #FFD60A; color: #000; }
+</style>
+</head>
+<body class="bg-[#FFF8E7] text-[#0a0a0a] overflow-x-hidden">
+
+  <!-- Top mini bar -->
+  <div class="bg-black text-[#FFD60A] py-2 overflow-hidden">
+    <div class="flex gap-12 whitespace-nowrap animate-marquee font-mono text-xs uppercase tracking-[0.25em]">
+      <div class="flex gap-12 shrink-0">
+        <span>★ Sitio web profesional</span>
+        <span>★ Desde $1,700 MXN</span>
+        <span>★ Dominio .com / .mx incluido</span>
+        <span>★ Hosting 1 año incluido</span>
+        <span>★ Listo en 48 horas</span>
+        <span>★ Google Maps + Redes + Contacto</span>
+      </div>
+      <div class="flex gap-12 shrink-0" aria-hidden="true">
+        <span>★ Sitio web profesional</span>
+        <span>★ Desde $1,700 MXN</span>
+        <span>★ Dominio .com / .mx incluido</span>
+        <span>★ Hosting 1 año incluido</span>
+        <span>★ Listo en 48 horas</span>
+        <span>★ Google Maps + Redes + Contacto</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="px-5 md:px-10 py-5 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <span class="font-display font-bold tracking-tight text-base">Platon Code</span>
+    </a>
+    <a id="cta-header"
+       href="#"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Quiero mi web por WhatsApp"
+       class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90"
+       style="background-color:#25D366">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.5-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.3 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4 1.9.7 2.6.8 3.5.6.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+      Quiero mi web
+    </a>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative px-5 md:px-10 pt-6 md:pt-10 pb-24">
+    <div aria-hidden="true" class="absolute -top-10 right-[-60px] w-[260px] h-[260px] rounded-full bg-[#FFD60A]" style="transform:rotate(-8deg)"></div>
+    <div aria-hidden="true" class="absolute top-40 left-[-40px] w-24 h-24 rounded-full bg-[#E63946]"></div>
+    <div aria-hidden="true" class="absolute bottom-10 right-10 w-16 h-16 bg-black" style="transform:rotate(12deg)"></div>
+
+    <div class="relative max-w-6xl mx-auto grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 reveal in-view">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="inline-block px-4 py-1.5 font-black uppercase tracking-wider text-sm bg-[#E63946] text-white" style="transform:rotate(-4deg)">Oferta limitada</span>
+          <span class="inline-block px-4 py-1.5 font-black uppercase tracking-wider text-sm bg-black text-[#FFD60A]" style="transform:rotate(3deg)">48 horas</span>
+        </div>
+
+        <h1 class="font-display font-black leading-[0.95] tracking-[-0.03em] text-[44px] sm:text-6xl lg:text-[88px]">
+          Creamos tu
+          <span class="relative inline-block">
+            <span class="relative z-10 text-white px-3">sitio web</span>
+            <span aria-hidden="true" class="absolute inset-0 bg-black -skew-y-2 z-0"></span>
+          </span>
+          profesional
+        </h1>
+
+        <p class="mt-6 text-lg md:text-xl text-black/80 max-w-xl leading-relaxed">
+          Tu negocio bien presentado en internet: <strong>dominio y hosting por 1 año incluidos</strong>, ubicación en Google Maps y contacto directo para que tus clientes te encuentren fácil.
+        </p>
+
+        <div class="mt-8 inline-flex items-center gap-4 bg-black text-white px-6 py-4 rounded-2xl">
+          <div class="text-xs uppercase tracking-widest text-[#FFD60A] font-mono">Desde</div>
+          <div class="font-display font-black text-4xl md:text-5xl leading-none">$1,700<span class="text-base font-semibold align-top ml-1">MXN</span></div>
+          <div class="text-[10px] font-mono uppercase tracking-widest text-white/60 border-l border-white/20 pl-3 leading-tight">
+            Dominio<br/>+ Hosting 1 año
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a class="cta-link group inline-flex items-center gap-3 text-white px-7 py-4 rounded-full font-bold text-lg transition-all hover:-translate-y-0.5 shadow-[6px_6px_0_0_#000]"
+             href="#"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Sí, quiero mi página web — abrir WhatsApp"
+             style="background-color:#25D366">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.5-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.3 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4 1.9.7 2.6.8 3.5.6.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+            Sí, quiero mi página web
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <div class="flex items-center gap-1 text-sm text-black/70">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFD60A" stroke="#FFD60A"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFD60A" stroke="#FFD60A"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFD60A" stroke="#FFD60A"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFD60A" stroke="#FFD60A"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFD60A" stroke="#FFD60A"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"/></svg>
+            <span class="ml-2">Negocios reales, clientes reales</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual card -->
+      <div class="lg:col-span-5 relative h-[420px] scale-reveal in-view">
+        <div class="absolute inset-0 bg-[#FFD60A] rounded-3xl border-4 border-black shadow-[12px_12px_0_0_#000] p-6" style="transform:rotate(3deg)">
+          <div class="font-mono text-xs uppercase tracking-widest mb-3">tu-negocio.com</div>
+          <div class="bg-white rounded-xl p-5 border-2 border-black">
+            <div class="h-3 w-2/3 bg-black mb-2 rounded"></div>
+            <div class="h-2 w-1/2 bg-black/30 mb-4 rounded"></div>
+            <div class="grid grid-cols-3 gap-2">
+              <div class="h-14 bg-[#E63946] rounded"></div>
+              <div class="h-14 bg-black rounded"></div>
+              <div class="h-14 bg-[#FFD60A] border-2 border-black rounded"></div>
+            </div>
+            <div class="mt-4 flex items-center gap-2 text-xs">
+              <!-- Google Maps -->
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-label="Google Maps"><path fill="#EA4335" d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8z"/><circle cx="12" cy="10" r="3" fill="#fff"/></svg>
+              <span>Av. Reforma 123, CDMX</span>
+            </div>
+          </div>
+          <div class="mt-4 flex items-center gap-3">
+            <!-- Facebook -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2" aria-label="Facebook"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
+            <!-- Instagram gradient -->
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-label="Instagram">
+              <defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FED576"/><stop offset="25%" stop-color="#F47133"/><stop offset="60%" stop-color="#BC3081"/><stop offset="100%" stop-color="#4C63D2"/></linearGradient></defs>
+              <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#ig)"/>
+              <circle cx="12" cy="12" r="4.2" fill="none" stroke="#fff" stroke-width="1.8"/>
+              <circle cx="17.2" cy="6.8" r="1.2" fill="#fff"/>
+            </svg>
+            <!-- TikTok -->
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-label="TikTok"><path fill="#000" d="M19.6 6.3a5.5 5.5 0 0 1-3.5-1.3V15a5.5 5.5 0 1 1-5.5-5.5c.3 0 .6 0 .9.1v3a2.6 2.6 0 1 0 1.8 2.4V2h2.9a5.5 5.5 0 0 0 3.4 4.3z"/></svg>
+            <!-- Google -->
+            <svg width="20" height="20" viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.4 29.3 35.5 24 35.5c-6.4 0-11.5-5.1-11.5-11.5S17.6 12.5 24 12.5c2.9 0 5.6 1.1 7.6 2.9l5.7-5.7C33.6 6.3 29 4.5 24 4.5 13.2 4.5 4.5 13.2 4.5 24S13.2 43.5 24 43.5 43.5 34.8 43.5 24c0-1.2-.1-2.3-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 16 18.9 12.5 24 12.5c2.9 0 5.6 1.1 7.6 2.9l5.7-5.7C33.6 6.3 29 4.5 24 4.5 16.3 4.5 9.7 8.8 6.3 14.7z"/><path fill="#4CAF50" d="M24 43.5c5 0 9.5-1.7 13-4.6l-6-5.1c-1.9 1.4-4.3 2.2-7 2.2-5.3 0-9.7-3.1-11.4-7.6l-6.5 5C9.5 39.1 16.2 43.5 24 43.5z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.2-4.3 5.6l6 5.1c-.4.4 6.5-4.7 6.5-14.7 0-1.2-.1-2.3-.4-3.5z"/></svg>
+            <!-- WhatsApp -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" aria-label="WhatsApp"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.5-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.3 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4 1.9.7 2.6.8 3.5.6.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          </div>
+        </div>
+        <div class="absolute -bottom-6 -left-6 bg-[#E63946] text-white px-4 py-3 rounded-xl font-bold border-4 border-black shadow-[6px_6px_0_0_#000]" style="transform:rotate(-6deg)">
+          <svg class="inline -mt-1" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+          Listo en 48 h
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE empresas -->
+  <section class="bg-black text-white py-6 overflow-hidden border-y-4 border-black">
+    <div class="flex gap-10 whitespace-nowrap animate-marquee-slow font-display font-bold text-2xl md:text-3xl uppercase">
+      <div class="flex gap-10 items-center shrink-0">
+        <span>Restaurantes</span><span class="text-[#FFD60A]">★</span>
+        <span>Talleres</span><span class="text-[#FFD60A]">★</span>
+        <span>Clínicas</span><span class="text-[#FFD60A]">★</span>
+        <span>Paqueterías</span><span class="text-[#FFD60A]">★</span>
+        <span>Agencias de viajes</span><span class="text-[#FFD60A]">★</span>
+        <span>Boutiques</span><span class="text-[#FFD60A]">★</span>
+        <span>Estéticas</span><span class="text-[#FFD60A]">★</span>
+        <span>Consultorios</span><span class="text-[#FFD60A]">★</span>
+        <span>Cafeterías</span><span class="text-[#FFD60A]">★</span>
+        <span>Constructoras</span><span class="text-[#FFD60A]">★</span>
+        <span>Hoteles</span><span class="text-[#FFD60A]">★</span>
+        <span>Gimnasios</span><span class="text-[#FFD60A]">★</span>
+      </div>
+      <div class="flex gap-10 items-center shrink-0" aria-hidden="true">
+        <span>Restaurantes</span><span class="text-[#FFD60A]">★</span>
+        <span>Talleres</span><span class="text-[#FFD60A]">★</span>
+        <span>Clínicas</span><span class="text-[#FFD60A]">★</span>
+        <span>Paqueterías</span><span class="text-[#FFD60A]">★</span>
+        <span>Agencias de viajes</span><span class="text-[#FFD60A]">★</span>
+        <span>Boutiques</span><span class="text-[#FFD60A]">★</span>
+        <span>Estéticas</span><span class="text-[#FFD60A]">★</span>
+        <span>Consultorios</span><span class="text-[#FFD60A]">★</span>
+        <span>Cafeterías</span><span class="text-[#FFD60A]">★</span>
+        <span>Constructoras</span><span class="text-[#FFD60A]">★</span>
+        <span>Hoteles</span><span class="text-[#FFD60A]">★</span>
+        <span>Gimnasios</span><span class="text-[#FFD60A]">★</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND STRIP -->
+  <section class="px-5 md:px-10 py-14 relative overflow-hidden">
+    <div aria-hidden="true" class="absolute -left-10 top-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-[#FFD60A]"></div>
+    <div aria-hidden="true" class="absolute right-8 bottom-2 w-12 h-12 bg-black" style="transform:rotate(18deg)"></div>
+    <div class="relative max-w-5xl mx-auto text-center reveal">
+      <div class="font-mono text-xs uppercase tracking-[0.3em] text-black/60 mb-6">Tu negocio · visible en todas partes</div>
+      <div class="flex items-center justify-center flex-wrap gap-7 md:gap-10">
+        <a class="brand-chip inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white border-2 border-black shadow-[4px_4px_0_0_#000]" href="https://google.com" target="_blank" rel="noopener noreferrer" aria-label="Google">
+          <svg width="28" height="28" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.4 29.3 35.5 24 35.5c-6.4 0-11.5-5.1-11.5-11.5S17.6 12.5 24 12.5c2.9 0 5.6 1.1 7.6 2.9l5.7-5.7C33.6 6.3 29 4.5 24 4.5 13.2 4.5 4.5 13.2 4.5 24S13.2 43.5 24 43.5 43.5 34.8 43.5 24c0-1.2-.1-2.3-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 16 18.9 12.5 24 12.5c2.9 0 5.6 1.1 7.6 2.9l5.7-5.7C33.6 6.3 29 4.5 24 4.5 16.3 4.5 9.7 8.8 6.3 14.7z"/><path fill="#4CAF50" d="M24 43.5c5 0 9.5-1.7 13-4.6l-6-5.1c-1.9 1.4-4.3 2.2-7 2.2-5.3 0-9.7-3.1-11.4-7.6l-6.5 5C9.5 39.1 16.2 43.5 24 43.5z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.2-4.3 5.6l6 5.1c-.4.4 6.5-4.7 6.5-14.7 0-1.2-.1-2.3-.4-3.5z"/></svg>
+        </a>
+        <a class="brand-chip inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white border-2 border-black shadow-[4px_4px_0_0_#000]" href="https://maps.google.com" target="_blank" rel="noopener noreferrer" aria-label="Google Maps">
+          <svg width="28" height="28" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8z"/><circle cx="12" cy="10" r="3" fill="#fff"/></svg>
+        </a>
+        <a class="brand-chip inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white border-2 border-black shadow-[4px_4px_0_0_#000]" href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#1877F2"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
+        </a>
+        <a class="brand-chip inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white border-2 border-black shadow-[4px_4px_0_0_#000]" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="28" height="28" viewBox="0 0 24 24">
+            <defs><linearGradient id="ig2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FED576"/><stop offset="25%" stop-color="#F47133"/><stop offset="60%" stop-color="#BC3081"/><stop offset="100%" stop-color="#4C63D2"/></linearGradient></defs>
+            <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#ig2)"/>
+            <circle cx="12" cy="12" r="4.2" fill="none" stroke="#fff" stroke-width="1.8"/>
+            <circle cx="17.2" cy="6.8" r="1.2" fill="#fff"/>
+          </svg>
+        </a>
+        <a class="brand-chip inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white border-2 border-black shadow-[4px_4px_0_0_#000]" href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <svg width="28" height="28" viewBox="0 0 24 24"><path fill="#000" d="M19.6 6.3a5.5 5.5 0 0 1-3.5-1.3V15a5.5 5.5 0 1 1-5.5-5.5c.3 0 .6 0 .9.1v3a2.6 2.6 0 1 0 1.8 2.4V2h2.9a5.5 5.5 0 0 0 3.4 4.3z"/></svg>
+        </a>
+        <a class="brand-chip cta-link inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white border-2 border-black shadow-[4px_4px_0_0_#000]" href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#25D366"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.5-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.3 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4 1.9.7 2.6.8 3.5.6.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALOR -->
+  <section class="px-5 md:px-10 py-20 md:py-28">
+    <div class="max-w-5xl mx-auto reveal">
+      <span class="inline-block px-4 py-1.5 font-black uppercase tracking-wider text-sm bg-[#FFD60A] text-black border-2 border-black" style="transform:rotate(-2deg)">+ que una página</span>
+      <h2 class="mt-4 font-display font-black text-4xl md:text-6xl tracking-[-0.03em] leading-[1]">
+        Una mejor imagen <br/>
+        para tu <span class="italic">negocio</span>.
+      </h2>
+      <p class="mt-6 text-lg md:text-xl text-black/75 max-w-3xl">
+        Un sitio web hace que tu negocio se vea más serio, más confiable y más fácil de compartir con clientes.
+        Ideal para mostrar tus servicios, ubicación, redes sociales y medios de contacto en un solo lugar.
+      </p>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="px-5 md:px-10 pb-20">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-end justify-between flex-wrap gap-4 mb-10">
+        <h3 class="font-display font-black text-3xl md:text-5xl tracking-tight">Todo incluido</h3>
+        <div class="font-mono text-xs uppercase tracking-widest text-black/60">6 elementos · 1 precio</div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Card template -->
+        <div class="reveal group relative bg-white border-4 border-black rounded-2xl p-6 transition-all shadow-[6px_6px_0_0_#000] hover:shadow-[10px_10px_0_0_#000] hover:-translate-y-1 hover:bg-[#FFD60A]" style="transform:rotate(-1deg)">
+          <div class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-black text-[#FFD60A] mb-4 transition-colors group-hover:bg-[#E63946] group-hover:text-white">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>
+          </div>
+          <div class="font-display font-black text-xl mb-1">Dominio .com o .mx</div>
+          <p class="text-black/75 text-sm leading-relaxed">Tu negocio con una dirección web profesional.</p>
+        </div>
+
+        <div class="reveal group relative bg-white border-4 border-black rounded-2xl p-6 transition-all shadow-[6px_6px_0_0_#000] hover:shadow-[10px_10px_0_0_#000] hover:-translate-y-1 hover:bg-[#FFD60A]" style="transform:rotate(1deg)">
+          <div class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-black text-[#FFD60A] mb-4 transition-colors group-hover:bg-[#E63946] group-hover:text-white">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><line x1="6" y1="7" x2="6.01" y2="7"/><line x1="6" y1="17" x2="6.01" y2="17"/></svg>
+          </div>
+          <div class="font-display font-black text-xl mb-1">Hosting por 1 año</div>
+          <p class="text-black/75 text-sm leading-relaxed">Tu sitio en línea, rápido y estable, incluido el primer año.</p>
+        </div>
+
+        <div class="reveal group relative bg-white border-4 border-black rounded-2xl p-6 transition-all shadow-[6px_6px_0_0_#000] hover:shadow-[10px_10px_0_0_#000] hover:-translate-y-1 hover:bg-[#FFD60A]" style="transform:rotate(-1deg)">
+          <div class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-black text-[#FFD60A] mb-4 transition-colors group-hover:bg-[#E63946] group-hover:text-white">
+            <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8z"/><circle cx="12" cy="10" r="3" fill="#fff"/></svg>
+          </div>
+          <div class="font-display font-black text-xl mb-1">Google Maps</div>
+          <p class="text-black/75 text-sm leading-relaxed">Para que tus clientes sepan dónde estás y cómo llegar.</p>
+        </div>
+
+        <div class="reveal group relative bg-white border-4 border-black rounded-2xl p-6 transition-all shadow-[6px_6px_0_0_#000] hover:shadow-[10px_10px_0_0_#000] hover:-translate-y-1 hover:bg-[#FFD60A]" style="transform:rotate(1deg)">
+          <div class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-black text-[#FFD60A] mb-4 transition-colors group-hover:bg-[#E63946] group-hover:text-white">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <div class="font-display font-black text-xl mb-1">Responsive total</div>
+          <p class="text-black/75 text-sm leading-relaxed">Se ve perfecto en celular, tablet y computadora.</p>
+        </div>
+
+        <div class="reveal group relative bg-white border-4 border-black rounded-2xl p-6 transition-all shadow-[6px_6px_0_0_#000] hover:shadow-[10px_10px_0_0_#000] hover:-translate-y-1 hover:bg-[#FFD60A]" style="transform:rotate(-1deg)">
+          <div class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-black text-[#FFD60A] mb-4 transition-colors group-hover:bg-[#E63946] group-hover:text-white">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="#FFD60A" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="#FFD60A"/></svg>
+          </div>
+          <div class="font-display font-black text-xl mb-1">Redes sociales</div>
+          <p class="text-black/75 text-sm leading-relaxed">Enlaces a Facebook, Instagram, TikTok u otras redes.</p>
+        </div>
+
+        <div class="reveal group relative bg-white border-4 border-black rounded-2xl p-6 transition-all shadow-[6px_6px_0_0_#000] hover:shadow-[10px_10px_0_0_#000] hover:-translate-y-1 hover:bg-[#FFD60A]" style="transform:rotate(1deg)">
+          <div class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-black text-[#FFD60A] mb-4 transition-colors group-hover:bg-[#E63946] group-hover:text-white">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.5-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.3 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4 1.9.7 2.6.8 3.5.6.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          </div>
+          <div class="font-display font-black text-xl mb-1">Contacto directo</div>
+          <p class="text-black/75 text-sm leading-relaxed">Botón para que tus clientes te escriban fácil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RAPIDEZ -->
+  <section class="px-5 md:px-10 py-20 md:py-28 bg-black text-white relative overflow-hidden">
+    <div aria-hidden="true" class="absolute -right-20 top-10 w-80 h-80 rounded-full bg-[#E63946]"></div>
+    <div aria-hidden="true" class="absolute left-10 bottom-0 w-32 h-32 bg-[#FFD60A]" style="transform:rotate(20deg)"></div>
+    <div class="relative max-w-5xl mx-auto text-center reveal">
+      <span class="inline-block px-4 py-1.5 font-black uppercase tracking-wider text-sm bg-[#FFD60A] text-black" style="transform:rotate(-3deg)">Velocidad real</span>
+      <h3 class="mt-5 font-display font-black text-5xl md:text-7xl lg:text-8xl tracking-[-0.03em] leading-[0.95]">
+        Listo en menos<br/>de <span class="text-[#FFD60A]">48 horas</span>.
+      </h3>
+      <p class="mt-6 text-lg md:text-xl text-white/75 max-w-2xl mx-auto">
+        Sin complicaciones. Sin procesos largos. Una página clara, moderna y enfocada en presentar tu negocio de forma profesional.
+      </p>
+      <div class="mt-10 flex flex-wrap justify-center gap-3 text-sm">
+        <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full"><span class="text-[#FFD60A]">✓</span> Diseño profesional</span>
+        <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full"><span class="text-[#FFD60A]">✓</span> Mobile first</span>
+        <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full"><span class="text-[#FFD60A]">✓</span> SEO base</span>
+        <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full"><span class="text-[#FFD60A]">✓</span> Dominio + Hosting</span>
+        <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full"><span class="text-[#FFD60A]">✓</span> Soporte directo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIERRE -->
+  <section class="px-5 md:px-10 py-24 md:py-32 relative overflow-hidden">
+    <div aria-hidden="true" class="absolute top-10 left-10 w-40 h-40 rounded-full bg-[#FFD60A]"></div>
+    <div aria-hidden="true" class="absolute bottom-20 right-20 w-24 h-24 bg-[#E63946] rounded-full"></div>
+    <div class="relative max-w-4xl mx-auto text-center reveal">
+      <h3 class="font-display font-black text-5xl md:text-7xl tracking-[-0.03em] leading-[0.95]">
+        Dale a tu negocio una<br/>
+        <span class="relative inline-block mt-2">
+          <span aria-hidden="true" class="absolute inset-0 bg-[#E63946] -skew-y-2"></span>
+          <span class="relative px-4 text-white">presencia profesional</span>
+        </span>
+      </h3>
+      <p class="mt-8 text-xl text-black/80">
+        Desde <strong>$1,700 MXN</strong> con dominio .com o .mx y hosting de 1 año incluidos.
+      </p>
+      <a href="#"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Sí, quiero mi página web — WhatsApp"
+         class="cta-link mt-10 group inline-flex items-center gap-3 text-white px-10 py-5 rounded-full font-bold text-xl transition-all hover:-translate-y-0.5 shadow-[8px_8px_0_0_#000]"
+         style="background-color:#25D366">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.5-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.3 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4 1.9.7 2.6.8 3.5.6.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        Sí, quiero mi página web
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+      <p class="mt-6 text-xs text-black/50 font-mono uppercase tracking-widest">Sujeto a disponibilidad del dominio</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white/70 py-10 px-5 md:px-10">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <div class="flex items-center gap-2">
+        <span class="font-display font-bold text-white">Platon Code</span>
+        <span>© <span id="year"></span> Platon Code Systems</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://www.facebook.com/platoncodesystems" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hover:text-[#FFD60A]">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/platoncodemx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-[#FFD60A]">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2"/></svg>
+        </a>
+        <span class="font-mono text-xs uppercase tracking-widest">platoncode.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Persistent CTA — morphs from pill to circle on scroll -->
+  <a id="cta-persistent"
+     href="#"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Sí, quiero mi página web"
+     class="cta-persistent cta-link fixed bottom-6 right-6 z-50 h-16 flex items-center justify-center gap-2 text-white font-bold overflow-hidden border-2 border-black shadow-[6px_6px_0_0_#000] rounded-full"
+     style="background-color:#25D366">
+    <svg class="shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.5-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.3 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4 1.9.7 2.6.8 3.5.6.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+    <span class="label whitespace-nowrap text-sm md:text-base">Sí, quiero mi página web</span>
+  </a>
+
+<script>
+  // === CONFIG ===
+  // Cuando tengas el número, descomenta y completa:
+  // const WHATSAPP_PHONE = "5215555555555"; // formato internacional sin "+"
+  const WHATSAPP_PHONE = ""; // vacío = wa.me/ (sólo texto)
+  const WA_MESSAGE = "Hola, quiero mi página web profesional desde $1,700 MXN (incluye dominio y hosting 1 año)";
+  const WHATSAPP_URL = "https://wa.me/" + WHATSAPP_PHONE + "?text=" + encodeURIComponent(WA_MESSAGE);
+
+  document.querySelectorAll('.cta-link, #cta-header').forEach(a => { a.href = WHATSAPP_URL; });
+
+  // === Año footer ===
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // === Scroll reveal ===
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal, .scale-reveal').forEach(el => io.observe(el));
+
+  // === Persistent CTA morph ===
+  const cta = document.getElementById('cta-persistent');
+  const onScroll = () => {
+    if (window.scrollY > 480) cta.classList.add('shrunk');
+    else cta.classList.remove('shrunk');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>
+</body>
+</html>
