@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { trackEvent } from "@/lib/meta";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ShieldCheck,
@@ -90,12 +91,14 @@ export default function LandingSitioWeb() {
     
     // Track landing view
     if (typeof window !== "undefined") {
+      trackEvent("ViewContent");
       // Simulate dataLayer or custom event push if needed
       console.log("Event: landing_view");
     }
   }, []);
 
   const handleWhatsAppClick = (eventLabel: string) => {
+    trackEvent("Contact");
     console.log(`Event: whatsapp_click, source: ${eventLabel}`);
     window.open(WHATSAPP_URL, "_blank", "noopener,noreferrer");
   };
