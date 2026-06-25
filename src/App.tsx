@@ -9,6 +9,7 @@ import NosotrosPage from "./pages/Nosotros.tsx";
 import SolucionesPage from "./pages/Soluciones.tsx";
 import PreciosPage from "./pages/Precios.tsx";
 import CasoPage from "./pages/Caso.tsx";
+import LandingSitioWeb from "./pages/LandingSitioWeb.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/caso" element={<CasoPage />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/siguiente-paso-sitio-web" element={<LandingSitioWeb />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
