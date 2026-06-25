@@ -19,7 +19,7 @@ export default async function handler(req: any, res: any) {
 
   const { eventName, eventId, eventUrl, userAgent, fbp, fbc, customData } = req.body;
 
-  const CAPI_TOKEN = process.env.META_CAPI_TOKEN;
+  const CAPI_TOKEN = process.env.META_CAPI_TOKEN || "EAAVfV5r9VOMBR584aaZCPL49oniNkC3k9EiG3e4tHby2BNCGPZCLEVfftCCxsmLCNHYOy91qjVgZC5XoYtYKV5UXizThEid5ZAVxoWxHkEwoi7sSylRmrQZBDeZCj1KuwmWKMdqIrJ5WRNARN4lrTFUw3OTquTet76RJjAlCmKEQ28W8gqCJ9iZByc10fR5PQFjQgZDZD";
   const PIXEL_ID = process.env.META_PIXEL_ID || '856230780501588';
 
   if (!CAPI_TOKEN) {
