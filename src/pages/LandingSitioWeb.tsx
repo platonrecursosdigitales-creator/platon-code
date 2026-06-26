@@ -25,6 +25,21 @@ import {
   lineDraw
 } from "@/lib/motion";
 import statueImg from "@/assets/imagenlandding.png";
+import statueAthena from "@/assets/statue_athena.png";
+import statueApollo from "@/assets/statue_apollo.png";
+import statueHermes from "@/assets/statue_hermes.png";
+
+import feat1 from "@/assets/statue_feature_1_1782446390064.png";
+import feat2 from "@/assets/statue_feature_2_1782446396960.png";
+import feat3 from "@/assets/statue_feature_3_1782446407391.png";
+import feat4 from "@/assets/statue_feature_4_1782446416347.png";
+import feat5 from "@/assets/statue_feature_5_1782446422681.png";
+import feat6 from "@/assets/statue_feature_6_1782446438896.png";
+import feat7 from "@/assets/statue_feature_7_1782446447372.png";
+import feat8 from "@/assets/statue_feature_8_1782446455249.png";
+import feat9 from "@/assets/statue_feature_9_1782446463174.png";
+import feat10 from "@/assets/statue_feature_10_1782446472623.png";
+import feat11 from "@/assets/statue_feature_11_1782446488110.png";
 
 const WHATSAPP_NUMBER = "529997677024";
 const WHATSAPP_TEXT = "Hola, acabo de dejar mis datos y quiero avanzar con mi sitio web.";
@@ -177,17 +192,50 @@ export default function LandingSitioWeb() {
               </Button>
             </motion.div>
 
-            <motion.p variants={revealUp} className="mt-4 text-sm text-ink/50 flex items-center gap-2">
+            <motion.p variants={revealUp} className="mt-4 text-sm text-ink/50 flex items-center justify-center lg:justify-start gap-2">
               <CheckCircle2 className="w-4 h-4 text-brand" />
               Ya dejaste tus datos. Un asesor te contactará por WhatsApp.
             </motion.p>
+            
+            {/* Promo Marketing */}
+            <motion.div variants={revealUp} className="mt-10 w-full max-w-xl bg-card border border-brand/20 p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-4">
+                <div className="flex flex-col items-center sm:items-start">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="bg-brand text-bone text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded shadow-sm">Incluido Gratis</span>
+                    <span className="text-sm font-semibold text-ink">Hosting y Dominio</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-ink/70">
+                    <span className="flex items-center gap-1"><Globe className="w-3 h-3" /> tuempresa.com</span>
+                  </div>
+                </div>
+                
+                <div className="w-full sm:w-px h-px sm:h-12 bg-ink/10"></div>
+                
+                <div className="flex flex-col items-center sm:items-start">
+                  <div className="flex items-center gap-2 mb-2">
+                     <span className="text-sm font-semibold text-ink">Correo Corporativo</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                     <span className="text-sm text-ink/70 font-mono flex items-center gap-1">
+                       <Mail className="w-3 h-3" /> contacto@tuempresa.com
+                     </span>
+                     <div className="flex items-center gap-1.5 ml-2 border-l border-ink/10 pl-2">
+                       <svg viewBox="0 0 24 24" fill="#EA4335" className="w-4 h-4" title="Gmail"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+                       <svg viewBox="0 0 24 24" fill="#0078D4" className="w-4 h-4" title="Outlook"><path d="M7.155 3.328 17.65 0v16.142l-10.495 2.871V3.328ZM17.65 17.615v6.385l6.35-1.964v-13.8L17.65 9.77v7.845Zm-6.326-8.583c-.808 0-1.464.71-1.464 1.583 0 .874.656 1.583 1.464 1.583.807 0 1.463-.71 1.463-1.583 0-.874-.656-1.583-1.463-1.583Zm0-1.583c1.517 0 2.744 1.417 2.744 3.166 0 1.748-1.227 3.166-2.744 3.166-1.517 0-2.744-1.418-2.744-3.166 0-1.749 1.227-3.166 2.744-3.166Z"/></svg>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
           </motion.div>
         </div>
       </section>
 
       {/* 2. POR QUÉ IMPORTA */}
-      <section className="py-24 lg:py-32 relative border-t border-ink/5">
-        <div className="container mx-auto px-6">
+      <section className="py-24 lg:py-32 relative border-t border-ink/5 overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div 
             initial="hidden"
             whileInView="show"
@@ -195,12 +243,20 @@ export default function LandingSitioWeb() {
             variants={staggerContainer}
             className="text-center max-w-3xl mx-auto mb-16"
           >
-            <motion.h2 variants={revealUp} className="font-display font-semibold text-[32px] md:text-[42px] leading-tight mb-6">
+            <motion.h2 variants={revealUp} className="font-display font-bold text-[32px] md:text-[42px] leading-tight mb-6">
               Antes de escribirte, el cliente ya te está evaluando
             </motion.h2>
-            <motion.p variants={revealUp} className="text-lg text-ink/70">
+            <motion.p variants={revealUp} className="text-lg md:text-xl text-ink/90 font-medium leading-relaxed px-4">
               Tu sitio web no es solo una página. Es la primera impresión seria de tu empresa en internet. Ayuda a que el cliente vea tus servicios, tu ubicación, tu forma de trabajo y la manera correcta de contactarte.
             </motion.p>
+            
+            {/* Logos Oficiales Estratégicos */}
+            <motion.div variants={revealUp} className="flex flex-wrap items-center justify-center gap-6 md:gap-10 mt-10 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 md:w-10 md:h-10 hover:text-[#4285F4] transition-colors"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 md:w-10 md:h-10 hover:text-[#1877F2] transition-colors"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 md:w-10 md:h-10 hover:text-[#E4405F] transition-colors"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 md:w-10 md:h-10 hover:text-[#25D366] transition-colors"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </motion.div>
           </motion.div>
 
           <motion.div 
@@ -208,35 +264,47 @@ export default function LandingSitioWeb() {
             whileInView="show"
             viewport={{ once: true, margin: "-50px" }}
             variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
           >
             {[
               {
                 icon: ShieldCheck,
                 title: "Confianza inmediata",
-                desc: "Cuando alguien encuentra una página profesional, percibe una empresa más seria, más ordenada y más preparada para atender."
+                desc: "Cuando alguien encuentra una página profesional, percibe una empresa más seria, más ordenada y más preparada para atender.",
+                img: statueAthena
               },
               {
                 icon: Search,
                 title: "Información clara",
-                desc: "Tu cliente puede ver tus servicios, fotos, ubicación, y WhatsApp sin tener que preguntarte todo por mensaje."
+                desc: "Tu cliente puede ver tus servicios, fotos, ubicación, y WhatsApp sin tener que preguntarte todo por mensaje.",
+                img: statueApollo
               },
               {
                 icon: LayoutTemplate,
                 title: "Mejor presentación",
-                desc: "Un sitio bien diseñado eleva la percepción de tu negocio y hace que tu empresa se vea al nivel de lo que realmente ofrece."
+                desc: "Un sitio bien diseñado eleva la percepción de tu negocio y hace que tu empresa se vea al nivel de lo que realmente ofrece.",
+                img: statueHermes
               }
             ].map((card, i) => (
               <motion.div 
                 key={i} 
                 variants={cardLift}
-                className="bg-card/40 backdrop-blur-sm border border-ink/10 rounded-2xl p-8 hover:bg-card/80 transition-colors duration-500 group shadow-sm hover:shadow-md"
+                className="relative bg-card overflow-hidden border border-ink/10 rounded-2xl p-8 md:p-10 hover:border-brand/30 transition-all duration-500 group shadow-sm hover:shadow-lg"
               >
-                <div className="w-12 h-12 bg-ink text-bone rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand transition-all duration-500">
-                  <card.icon className="w-6 h-6" />
+                {/* Fondo de estatua */}
+                <div className="absolute inset-0 z-0 opacity-40 mix-blend-multiply transition-transform duration-700 group-hover:scale-105">
+                  <img src={card.img} alt={card.title} className="w-full h-full object-cover object-center" />
                 </div>
-                <h3 className="font-display font-semibold text-xl mb-3">{card.title}</h3>
-                <p className="text-ink/70 leading-relaxed">{card.desc}</p>
+                {/* Degradado para asegurar que el texto sea perfectamente legible sobre la estatua */}
+                <div className="absolute inset-0 z-0 bg-gradient-to-t from-card via-card/80 to-card/20 md:via-card/60"></div>
+
+                <div className="relative z-10 flex flex-col h-full justify-end pt-12 md:pt-16">
+                  <div className="w-14 h-14 bg-ink text-bone rounded-xl flex items-center justify-center mb-6 group-hover:-translate-y-2 group-hover:bg-brand transition-all duration-500 shadow-md">
+                    <card.icon className="w-7 h-7" />
+                  </div>
+                  <h3 className="font-display font-bold text-2xl text-ink mb-3">{card.title}</h3>
+                  <p className="text-ink/90 font-medium leading-relaxed">{card.desc}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -267,34 +335,43 @@ export default function LandingSitioWeb() {
             whileInView="show"
             viewport={{ once: true, margin: "-50px" }}
             variants={staggerContainer}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {[
-              { t: "Diseño web profesional adaptado a tu marca", i: LayoutTemplate },
-              { t: "Versión móvil responsive", i: Smartphone },
-              { t: "Dominio .com o .mx sujeto a disponibilidad", i: Globe },
-              { t: "Hosting incluido por un año", i: Check },
-              { t: "Correo corporativo con tu dominio", i: Mail },
-              { t: "Hasta 5 secciones estratégicas", i: Layers },
-              { t: "Formulario de contacto", i: Check },
-              { t: "Botón directo a WhatsApp", i: MessageCircle },
-              { t: "Google Maps integrado", i: MapPin },
-              { t: "Enlaces a redes sociales", i: Check },
-              { t: "Galería de fotos", i: ImageIcon },
-              { t: "Catálogo de servicios", i: Check },
-              { t: "Testimonios", i: Check },
-              { t: "Mantenimiento incluido durante el año", i: ShieldCheck },
-              { t: "Preparada para medición digital", i: Search },
+              { t: "Diseño web profesional adaptado a tu marca", i: LayoutTemplate, img: feat1 },
+              { t: "Versión móvil responsive", i: Smartphone, img: feat2 },
+              { t: "Dominio .com o .mx sujeto a disponibilidad", i: Globe, img: feat3 },
+              { t: "Hosting incluido por un año", i: Check, img: feat4 },
+              { t: "Correo corporativo con tu dominio", i: Mail, img: feat5 },
+              { t: "Hasta 5 secciones estratégicas", i: Layers, img: feat6 },
+              { t: "Formulario de contacto", i: Check, img: feat7 },
+              { t: "Botón directo a WhatsApp", i: MessageCircle, img: feat8 },
+              { t: "Google Maps integrado", i: MapPin, img: feat9 },
+              { t: "Enlaces a redes sociales", i: Check, img: feat10 },
+              { t: "Galería de fotos", i: ImageIcon, img: feat11 },
+              { t: "Catálogo de servicios", i: Check, img: feat6 },
+              { t: "Testimonios", i: Check, img: feat7 },
+              { t: "Mantenimiento incluido durante el año", i: ShieldCheck, img: feat4 },
+              { t: "Preparada para medición digital", i: Search, img: feat2 },
             ].map((item, idx) => (
               <motion.div 
                 key={idx}
                 variants={revealUp}
-                className="flex items-start gap-3 p-4 rounded-xl bg-bone/5 border border-bone/10 hover:bg-bone/10 transition-colors"
+                className="relative overflow-hidden rounded-2xl border border-bone/10 group flex items-end min-h-[140px] md:min-h-[180px] p-6 hover:border-brand/40 transition-all duration-500 shadow-md hover:shadow-lg"
               >
-                <div className="mt-1 flex-shrink-0 text-brand">
-                  <item.i className="w-5 h-5" />
+                {/* Background Image Layer */}
+                <div className="absolute inset-0 z-0">
+                  <img src={item.img} alt={item.t} className="w-full h-full object-cover opacity-30 mix-blend-luminosity group-hover:scale-110 group-hover:opacity-40 transition-all duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/10"></div>
                 </div>
-                <span className="text-sm font-medium leading-relaxed">{item.t}</span>
+                
+                {/* Content */}
+                <div className="relative z-10 flex flex-col gap-3 w-full">
+                  <div className="w-10 h-10 bg-brand/20 backdrop-blur-md rounded-lg flex items-center justify-center text-brand mb-1 group-hover:bg-brand group-hover:text-bone transition-all duration-500">
+                    <item.i className="w-5 h-5" />
+                  </div>
+                  <span className="text-base font-semibold leading-tight text-bone drop-shadow-md">{item.t}</span>
+                </div>
               </motion.div>
             ))}
           </motion.div>
