@@ -41,7 +41,7 @@ import feat9 from "@/assets/statue_feature_9_1782446463174.png";
 import feat10 from "@/assets/statue_feature_10_1782446472623.png";
 import feat11 from "@/assets/statue_feature_11_1782446488110.png";
 
-const WHATSAPP_NUMBER = "529997677024";
+const WHATSAPP_NUMBER = "5215668043332";
 const WHATSAPP_TEXT = "Hola, acabo de dejar mis datos y quiero avanzar con mi sitio web.";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_TEXT)}`;
 
