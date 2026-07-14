@@ -29,7 +29,7 @@ const App = () => (
             <Route path="/caso" element={<CasoPage />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="/siguiente-paso-sitio-web" element={<LandingSitioWeb />} />
+          <Route path="/informacion-sitio-web" element={<LandingSitioWeb />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -13,7 +13,9 @@ import {
   Search,
   MessageCircle,
   ImageIcon,
-  Layers
+  Layers,
+  Instagram,
+  PenTool
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
@@ -88,7 +90,7 @@ function HeroTitle() {
   };
 
   return (
-    <h1 className="font-display font-semibold text-ink leading-[1.1] tracking-tight text-[36px] sm:text-[42px] md:text-[48px] lg:text-[56px] text-balance mb-6 w-full">
+    <h1 className="font-display font-semibold text-ink leading-[1.05] tracking-tight text-[34px] sm:text-[42px] md:text-[48px] lg:text-[56px] text-balance mb-5 w-full drop-shadow-sm">
       {renderPart(prefix, 0, false)}
       {renderPart(target, prefix.length, true)}
       {renderPart(suffix, prefix.length + target.length, false)}
@@ -121,7 +123,7 @@ export default function LandingSitioWeb() {
   return (
     <div className="bg-bone min-h-screen text-ink overflow-x-hidden selection:bg-brand selection:text-bone">
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[100svh] w-full flex items-center overflow-hidden pt-20 pb-16 lg:pt-0 lg:pb-0">
+      <section className="relative min-h-[100svh] w-full flex items-center lg:items-center overflow-hidden pt-12 pb-16 lg:pt-0 lg:pb-0">
         <div className="noise z-0"></div>
         {/* Glow behind statue */}
         <div className="absolute right-[-10vw] top-1/2 -translate-y-1/2 w-[60vw] h-[60vw] bg-brand/10 rounded-full blur-[120px] pointer-events-none z-0 hidden lg:block"></div>
@@ -134,23 +136,23 @@ export default function LandingSitioWeb() {
           initial={{ opacity: 0, x: 50, filter: "blur(8px)" }}
           animate={{ opacity: 0.95, x: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.8, ease: easePremium, delay: 0.2 }}
-          className="absolute lg:right-[-2vw] lg:bottom-0 lg:top-auto lg:translate-y-0 right-1/2 translate-x-1/2 top-[10%] opacity-20 lg:opacity-100 lg:h-[85vh] h-[60vh] w-auto object-contain object-bottom z-0"
+          className="absolute lg:right-[-2vw] lg:bottom-0 lg:top-auto lg:translate-y-0 -right-[10%] bottom-0 top-auto opacity-15 lg:opacity-100 lg:h-[85vh] h-[55vh] w-auto object-contain object-bottom z-0"
           style={{
             WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 15%, black 100%)",
             maskImage: "linear-gradient(to top, transparent 0%, black 15%, black 100%)",
           }}
         />
 
-        <div className="container relative z-10 mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center h-full">
+        <div className="container relative z-10 mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full mt-10 lg:mt-0">
           {/* Left Text */}
           <motion.div 
             variants={staggerContainer}
             initial="hidden"
             animate="show"
-            className="flex flex-col items-center text-center lg:items-start lg:text-left mt-32 lg:mt-0"
+            className="flex flex-col items-center text-center lg:items-start lg:text-left pt-10 lg:pt-0"
           >
-            <motion.div variants={revealUp} className="flex flex-wrap gap-2 justify-center lg:justify-start mb-6">
-              <span className="text-xs font-mono tracking-widest uppercase bg-ink/5 border border-ink/10 px-3 py-1 rounded-full text-ink/80 backdrop-blur-sm">
+            <motion.div variants={revealUp} className="flex flex-wrap gap-2 justify-center lg:justify-start mb-6 w-full">
+              <span className="text-[11px] sm:text-xs font-mono tracking-widest uppercase bg-ink/10 border border-ink/20 px-4 py-1.5 rounded-full text-ink font-semibold shadow-sm backdrop-blur-md">
                 Sitio web profesional
               </span>
               <span className="text-xs font-mono tracking-widest uppercase bg-ink/5 border border-ink/10 px-3 py-1 rounded-full text-ink/80 backdrop-blur-sm hidden sm:inline-block">
@@ -162,14 +164,14 @@ export default function LandingSitioWeb() {
 
             <motion.p 
               variants={revealUp}
-              className="text-lg md:text-xl text-ink/70 max-w-xl text-pretty mb-8 leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-ink/80 max-w-xl text-pretty mb-8 leading-relaxed font-medium bg-bone/40 backdrop-blur-sm p-2 sm:p-0 rounded-lg"
             >
               Los clientes buscan en Google antes de decidir. Si no encuentran una página clara, profesional y bien presentada, la oportunidad puede terminar en manos de otra empresa.
               <br/><br/>
-              En <span className="font-semibold text-ink">Platon Code</span> creamos sitios web profesionales para que tu empresa se vea más sólida y haga más fácil que el cliente te contacte.
+              En <span className="font-bold text-ink">Platon Code</span> creamos sitios web profesionales para que tu empresa se vea más sólida y haga más fácil que el cliente te contacte.
             </motion.p>
 
-            <motion.div variants={revealUp} className="flex flex-col sm:flex-row gap-4 items-center lg:items-start w-full sm:w-auto">
+            <motion.div variants={revealUp} className="flex flex-col sm:flex-row gap-3 items-center lg:items-start w-full sm:w-auto">
               <Button 
                 variant="hero" 
                 size="lg" 
@@ -198,11 +200,11 @@ export default function LandingSitioWeb() {
             </motion.p>
             
             {/* Promo Marketing */}
-            <motion.div variants={revealUp} className="mt-10 w-full max-w-xl bg-card border border-brand/20 p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-4">
-                <div className="flex flex-col items-center sm:items-start">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="bg-brand text-bone text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded shadow-sm">Incluido Gratis</span>
+            <motion.div variants={revealUp} className="mt-10 w-full max-w-xl bg-white/80 backdrop-blur-md border border-ink/10 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-5">
+                <div className="flex flex-col items-center sm:items-start w-full">
+                  <div className="flex items-center justify-center sm:justify-start gap-2 mb-2 w-full">
+                    <span className="bg-brand text-bone text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">Incluido Gratis</span>
                     <span className="text-sm font-semibold text-ink">Hosting y Dominio</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-ink/70">
@@ -342,12 +344,13 @@ export default function LandingSitioWeb() {
               { t: "Versión móvil responsive", i: Smartphone, img: feat2 },
               { t: "Dominio .com o .mx sujeto a disponibilidad", i: Globe, img: feat3 },
               { t: "Hosting incluido por un año", i: Check, img: feat4 },
-              { t: "Correo corporativo con tu dominio", i: Mail, img: feat5 },
+              { t: "Correo corporativo incluido", i: Mail, img: feat5 },
+              { t: "Buen copy (neuromarketing)", i: PenTool, img: feat6 },
               { t: "Hasta 5 secciones estratégicas", i: Layers, img: feat6 },
               { t: "Formulario de contacto", i: Check, img: feat7 },
               { t: "Botón directo a WhatsApp", i: MessageCircle, img: feat8 },
               { t: "Google Maps integrado", i: MapPin, img: feat9 },
-              { t: "Enlaces a redes sociales", i: Check, img: feat10 },
+              { t: "Integración a redes sociales", i: Instagram, img: feat10 },
               { t: "Galería de fotos", i: ImageIcon, img: feat11 },
               { t: "Catálogo de servicios", i: Check, img: feat6 },
               { t: "Testimonios", i: Check, img: feat7 },
@@ -357,7 +360,7 @@ export default function LandingSitioWeb() {
               <motion.div 
                 key={idx}
                 variants={revealUp}
-                className="relative overflow-hidden rounded-2xl border border-bone/10 group flex items-end min-h-[140px] md:min-h-[180px] p-6 hover:border-brand/40 transition-all duration-500 shadow-md hover:shadow-lg"
+                className="relative overflow-hidden rounded-2xl border border-bone/10 group flex items-end min-h-[120px] md:min-h-[180px] p-5 md:p-6 hover:border-brand/40 transition-all duration-500 shadow-md hover:shadow-lg"
               >
                 {/* Background Image Layer */}
                 <div className="absolute inset-0 z-0">
@@ -366,11 +369,11 @@ export default function LandingSitioWeb() {
                 </div>
                 
                 {/* Content */}
-                <div className="relative z-10 flex flex-col gap-3 w-full">
-                  <div className="w-10 h-10 bg-brand/20 backdrop-blur-md rounded-lg flex items-center justify-center text-brand mb-1 group-hover:bg-brand group-hover:text-bone transition-all duration-500">
-                    <item.i className="w-5 h-5" />
+                <div className="relative z-10 flex flex-col gap-2 md:gap-3 w-full">
+                  <div className="w-8 h-8 md:w-10 md:h-10 bg-brand/30 backdrop-blur-md rounded-lg flex items-center justify-center text-brand mb-1 group-hover:bg-brand group-hover:text-bone transition-all duration-500">
+                    <item.i className="w-4 h-4 md:w-5 md:h-5" />
                   </div>
-                  <span className="text-base font-semibold leading-tight text-bone drop-shadow-md">{item.t}</span>
+                  <span className="text-sm md:text-base font-semibold leading-tight text-bone drop-shadow-md">{item.t}</span>
                 </div>
               </motion.div>
             ))}
@@ -379,40 +382,40 @@ export default function LandingSitioWeb() {
       </section>
 
       {/* 4. INVERSIÓN */}
-      <section className="py-24 lg:py-32 relative" data-event="pricing_view">
-        <div className="container mx-auto px-6 flex justify-center">
+      <section className="py-20 lg:py-32 relative" data-event="pricing_view">
+        <div className="container mx-auto px-4 sm:px-6 flex justify-center">
           <motion.div 
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="w-full max-w-4xl bg-card border border-ink/10 rounded-[2rem] p-8 md:p-16 text-center shadow-soft relative overflow-hidden"
+            className="w-full max-w-4xl bg-white border-2 border-brand/10 rounded-[2rem] p-6 md:p-16 text-center shadow-xl relative overflow-hidden"
           >
             {/* Decorative background element */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-brand/5 rounded-full blur-[80px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand/10 rounded-full blur-[80px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
             
-            <motion.h2 variants={revealUp} className="font-display font-semibold text-[32px] md:text-[42px] leading-tight mb-4 text-ink">
+            <motion.h2 variants={revealUp} className="font-display font-bold text-[28px] md:text-[42px] leading-tight mb-3 text-ink">
               Inversión del servicio
             </motion.h2>
-            <motion.p variants={revealUp} className="text-lg text-ink/70 mb-8 max-w-2xl mx-auto">
+            <motion.p variants={revealUp} className="text-base md:text-lg text-ink/70 mb-6 max-w-2xl mx-auto">
               El desarrollo de tu sitio web profesional tiene una inversión de:
             </motion.p>
             
             <motion.div variants={revealUp} className="mb-8">
-              <span className="text-[54px] md:text-[72px] font-display font-bold text-brand tracking-tighter leading-none">
-                $6,200 <span className="text-2xl text-ink/50 tracking-normal font-sans font-medium uppercase">mxn</span>
+              <span className="text-[48px] md:text-[72px] font-display font-black text-brand tracking-tighter leading-none flex items-center justify-center gap-2 drop-shadow-sm">
+                $3,600 <span className="text-xl md:text-2xl text-ink/40 tracking-normal font-sans font-semibold uppercase mt-2 md:mt-4">mxn</span>
               </span>
             </motion.div>
             
-            <motion.p variants={revealUp} className="text-base text-ink/80 font-medium mb-10 bg-ink/5 py-3 px-6 rounded-full inline-block">
+            <motion.p variants={revealUp} className="text-sm md:text-base text-ink/80 font-medium mb-10 bg-ink/5 py-3 px-6 rounded-full inline-block">
               El pago se divide en dos partes: 50% para iniciar el proyecto y 50% al finalizar.
             </motion.p>
 
-            <motion.div variants={revealUp} className="bg-bone/50 border border-brand/20 p-6 rounded-xl max-w-2xl mx-auto mb-10 text-left flex gap-4">
-              <ShieldCheck className="w-8 h-8 text-brand flex-shrink-0 mt-1" />
+            <motion.div variants={revealUp} className="bg-brand/5 border border-brand/20 p-5 md:p-6 rounded-2xl max-w-2xl mx-auto mb-10 text-left flex flex-col sm:flex-row gap-3 sm:gap-4 items-start shadow-sm">
+              <ShieldCheck className="w-7 h-7 md:w-8 md:h-8 text-brand flex-shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-semibold text-ink mb-1">Garantía sin riesgo</h4>
-                <p className="text-sm text-ink/70">Antes de iniciar el pago, trabajamos una versión preliminar para que puedas ver la dirección visual de tu sitio. <strong>Si no te gusta esa propuesta inicial, no pagas.</strong></p>
+                <h4 className="font-bold text-ink mb-1 text-base md:text-lg">Garantía sin riesgo</h4>
+                <p className="text-sm md:text-base text-ink/80 leading-relaxed">Antes de iniciar el pago, trabajamos una versión preliminar para que puedas ver la dirección visual de tu sitio. <strong>Si no te gusta esa propuesta inicial, no pagas.</strong></p>
               </div>
             </motion.div>
             
@@ -474,10 +477,10 @@ export default function LandingSitioWeb() {
               ].map((step, idx) => (
                 <motion.div key={idx} variants={revealUp} className={`flex flex-col sm:flex-row gap-6 sm:gap-12 relative ${idx % 2 === 0 ? "md:flex-row-reverse text-left md:text-right" : "text-left"}`}>
                   <div className={`hidden md:block w-1/2 ${idx % 2 === 0 ? "pr-12" : "pl-12"}`}></div>
-                  <div className="absolute left-0 sm:left-[8px] md:left-1/2 top-0 w-12 h-12 bg-bone border-4 border-ink text-ink rounded-full flex items-center justify-center font-display font-bold z-10 md:-translate-x-1/2 text-sm shadow-sm">
+                  <div className="absolute left-0 sm:left-[8px] md:left-1/2 top-0 w-10 h-10 md:w-12 md:h-12 bg-bone border-[3px] md:border-4 border-ink text-ink rounded-full flex items-center justify-center font-display font-bold z-10 md:-translate-x-1/2 text-xs md:text-sm shadow-sm mt-1 md:mt-0">
                     {step.s}
                   </div>
-                  <div className={`md:w-1/2 pl-16 sm:pl-0 ${idx % 2 === 0 ? "md:pl-12" : "md:pr-12"}`}>
+                  <div className={`md:w-1/2 pl-14 sm:pl-0 ${idx % 2 === 0 ? "md:pl-12" : "md:pr-12"}`}>
                     <h3 className="font-display font-semibold text-xl mb-2 pt-2">{step.t}</h3>
                     <p className="text-ink/70 leading-relaxed">{step.d}</p>
                   </div>
