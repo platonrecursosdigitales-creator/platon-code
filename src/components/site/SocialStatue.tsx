@@ -59,28 +59,29 @@ export function SocialStatue() {
       </div>
 
       {/* MOBILE LAYOUT */}
-      <div className="block lg:hidden w-full h-full">
+      <div className="block lg:hidden absolute bottom-0 left-0 w-full h-[60vh] overflow-hidden">
         {/* SVG Dotted Lines Mobile */}
         <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 100 100" preserveAspectRatio="none">
           <g stroke="#2563eb" strokeWidth="0.4" strokeDasharray="0 1.5" fill="none" strokeLinecap="round">
-            <path d="M 50 75 Q 35 60 20 45" />
-            <path d="M 50 75 Q 45 55 40 35" />
-            <path d="M 50 75 Q 55 55 60 35" />
-            <path d="M 50 75 Q 65 60 80 45" />
-            <path d="M 50 75 Q 30 65 15 60" />
-            <path d="M 50 75 Q 70 65 85 60" />
-            <path d="M 50 75 Q 50 65 50 55" />
+            {/* Origin: x: 50, y: 60 (relative to 60vh box) */}
+            <path d="M 50 60 Q 30 50 20 30" /> {/* Instagram */}
+            <path d="M 50 60 Q 40 40 35 20" /> {/* Facebook */}
+            <path d="M 50 60 Q 60 40 65 20" /> {/* TikTok */}
+            <path d="M 50 60 Q 70 50 80 30" /> {/* Google */}
+            <path d="M 50 60 Q 30 70 15 70" /> {/* YouTube */}
+            <path d="M 50 60 Q 70 70 85 70" /> {/* WhatsApp */}
+            <path d="M 50 60 Q 50 40 50 25" /> {/* Gmail */}
           </g>
         </svg>
 
-        {/* Icons */}
-        <IconBadgeMobile src={ICONS.instagram} top="45%" left="20%" delay={0.2} />
-        <IconBadgeMobile src={ICONS.facebook} top="35%" left="40%" delay={0.4} />
-        <IconBadgeMobile src={ICONS.tiktok} top="35%" left="60%" delay={0.6} />
-        <IconBadgeMobile src={ICONS.google} top="45%" left="80%" delay={0.8} />
-        <IconBadgeMobile src={ICONS.youtube} top="60%" left="15%" delay={1.0} />
-        <IconBadgeMobile src={ICONS.whatsapp} top="60%" left="85%" delay={1.2} />
-        <IconBadgeMobile src={ICONS.gmail} top="55%" left="50%" delay={1.4} />
+        {/* Icons (top percentages are relative to the 60vh box) */}
+        <IconBadgeMobile src={ICONS.instagram} top="30%" left="20%" delay={0.2} />
+        <IconBadgeMobile src={ICONS.facebook} top="20%" left="35%" delay={0.4} />
+        <IconBadgeMobile src={ICONS.tiktok} top="20%" left="65%" delay={0.6} />
+        <IconBadgeMobile src={ICONS.google} top="30%" left="80%" delay={0.8} />
+        <IconBadgeMobile src={ICONS.youtube} top="70%" left="15%" delay={1.0} />
+        <IconBadgeMobile src={ICONS.whatsapp} top="70%" left="85%" delay={1.2} />
+        <IconBadgeMobile src={ICONS.gmail} top="25%" left="50%" delay={1.4} />
 
         {/* Price Bubble Mobile */}
         <motion.div 
@@ -88,7 +89,7 @@ export function SocialStatue() {
           animate={{ opacity: 1, scale: 1, x: "-50%" }}
           transition={{ duration: 0.8, delay: 1.5, type: "spring" }}
           className="absolute bg-white/95 backdrop-blur-md border border-brand/20 shadow-2xl rounded-2xl p-4 text-center w-[85%] max-w-[320px]"
-          style={{ top: '15%', left: '50%' }}
+          style={{ top: '-10%', left: '50%' }}
         >
            <h3 className="text-sm font-semibold text-ink/70 uppercase tracking-widest mb-1">Todo en un solo lugar</h3>
            <p className="font-display text-2xl font-bold text-brand leading-none">

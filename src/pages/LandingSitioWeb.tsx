@@ -132,6 +132,9 @@ export default function LandingSitioWeb() {
         {/* Glow behind statue */}
         <div className="absolute right-[-10vw] top-1/2 -translate-y-1/2 w-[60vw] h-[60vw] bg-brand/10 rounded-full blur-[120px] pointer-events-none z-0 hidden lg:block"></div>
         
+        {/* Network & Social Icons Behind Statue */}
+        <SocialStatue />
+
         {/* Statue Image - Desktop Right, Mobile Bottom */}
         <motion.img
           src={statueImg}
@@ -140,17 +143,14 @@ export default function LandingSitioWeb() {
           initial={{ opacity: 0, x: 50, filter: "blur(8px)" }}
           animate={{ opacity: 0.95, x: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.8, ease: easePremium, delay: 0.2 }}
-          className="absolute lg:right-[-2vw] lg:bottom-0 lg:top-auto lg:translate-y-0 -right-[10%] bottom-0 top-auto opacity-15 lg:opacity-100 lg:h-[85vh] h-[55vh] w-auto object-contain object-bottom z-0"
+          className="absolute lg:right-[-2vw] lg:bottom-0 lg:top-auto lg:translate-y-0 -right-[10%] bottom-0 top-auto opacity-100 lg:opacity-100 lg:h-[85vh] h-[55vh] w-auto object-contain object-bottom z-0"
           style={{
             WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 15%, black 100%)",
             maskImage: "linear-gradient(to top, transparent 0%, black 15%, black 100%)",
           }}
         />
 
-        {/* Network & Social Icons Over Statue */}
-        <SocialStatue />
-
-        <div className="container relative z-10 mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full mt-10 lg:mt-0">
+        <div className="container relative z-10 mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full mt-10 lg:mt-0 pb-[65vh] lg:pb-0">
           {/* Left Text */}
           <motion.div 
             variants={staggerContainer}
