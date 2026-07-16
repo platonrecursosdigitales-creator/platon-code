@@ -19,6 +19,7 @@ import {
   Facebook
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import {
   easePremium,
@@ -27,6 +28,11 @@ import {
   cardLift,
   lineDraw
 } from "@/lib/motion";
+import hostingerIcon from "@/assets/icons/hostinger.svg";
+import mapsIcon from "@/assets/icons/maps.svg";
+import gmailIcon from "@/assets/icons/gmail.svg";
+import facebookIcon from "@/assets/icons/facebook.svg";
+import instagramIcon from "@/assets/icons/instagram.svg";
 import statueImg from "@/assets/imagenlandding.png";
 import { SocialStatue } from "@/components/site/SocialStatue";
 import { SocialStatue } from "@/components/site/SocialStatue";
