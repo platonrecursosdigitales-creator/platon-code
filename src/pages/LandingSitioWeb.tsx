@@ -28,6 +28,7 @@ import {
   lineDraw
 } from "@/lib/motion";
 import statueImg from "@/assets/imagenlandding.png";
+import { SocialStatue } from "@/components/site/SocialStatue";
 import statueAthena from "@/assets/statue_athena.png";
 import statueApollo from "@/assets/statue_apollo.png";
 import statueHermes from "@/assets/statue_hermes.png";
