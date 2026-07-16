@@ -30,6 +30,7 @@ import statueImg from "@/assets/imagenlandding.png";
 import statueAthena from "@/assets/statue_athena.png";
 import statueApollo from "@/assets/statue_apollo.png";
 import statueHermes from "@/assets/statue_hermes.png";
+import mockupImg from "@/assets/portfolio_mockup.png";
 
 import feat1 from "@/assets/statue_feature_1_1782446390064.png";
 import feat2 from "@/assets/statue_feature_2_1782446396960.png";
@@ -168,7 +169,7 @@ export default function LandingSitioWeb() {
             >
               Los clientes buscan en Google antes de decidir. Si no encuentran una página clara, profesional y bien presentada, la oportunidad puede terminar en manos de otra empresa.
               <br/><br/>
-              En <span className="font-bold text-ink">Platon Code</span> creamos sitios web profesionales para que tu empresa se vea más sólida y haga más fácil que el cliente te contacte.
+              En <span className="font-bold text-ink">Platon Code</span>, somos una agencia de desarrollo web dedicada a crear sitios web profesionales para que tu empresa se vea más sólida y haga más fácil que el cliente te contacte.
             </motion.p>
 
             <motion.div variants={revealUp} className="flex flex-col sm:flex-row gap-3 items-center lg:items-start w-full sm:w-auto">
@@ -235,170 +236,23 @@ export default function LandingSitioWeb() {
         </div>
       </section>
 
-      {/* 2. POR QUÉ IMPORTA */}
-      <section className="py-24 lg:py-32 relative border-t border-ink/5 overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div 
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="text-center max-w-3xl mx-auto mb-16"
-          >
-            <motion.h2 variants={revealUp} className="font-display font-bold text-[32px] md:text-[42px] leading-tight mb-6">
-              Antes de escribirte, el cliente ya te está evaluando
-            </motion.h2>
-            <motion.p variants={revealUp} className="text-lg md:text-xl text-ink/90 font-medium leading-relaxed px-4">
-              Tu sitio web no es solo una página. Es la primera impresión seria de tu empresa en internet. Ayuda a que el cliente vea tus servicios, tu ubicación, tu forma de trabajo y la manera correcta de contactarte.
-            </motion.p>
-            
-            {/* Logos Oficiales Estratégicos */}
-            <motion.div variants={revealUp} className="flex flex-wrap items-center justify-center gap-6 md:gap-10 mt-10 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 md:w-10 md:h-10 hover:text-[#4285F4] transition-colors"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 md:w-10 md:h-10 hover:text-[#1877F2] transition-colors"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 md:w-10 md:h-10 hover:text-[#E4405F] transition-colors"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 md:w-10 md:h-10 hover:text-[#25D366] transition-colors"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            </motion.div>
-          </motion.div>
-
-          <motion.div 
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
-          >
-            {[
-              {
-                icon: ShieldCheck,
-                title: "Confianza inmediata",
-                desc: "Cuando alguien encuentra una página profesional, percibe una empresa más seria, más ordenada y más preparada para atender.",
-                img: statueAthena
-              },
-              {
-                icon: Search,
-                title: "Información clara",
-                desc: "Tu cliente puede ver tus servicios, fotos, ubicación, y WhatsApp sin tener que preguntarte todo por mensaje.",
-                img: statueApollo
-              },
-              {
-                icon: LayoutTemplate,
-                title: "Mejor presentación",
-                desc: "Un sitio bien diseñado eleva la percepción de tu negocio y hace que tu empresa se vea al nivel de lo que realmente ofrece.",
-                img: statueHermes
-              }
-            ].map((card, i) => (
-              <motion.div 
-                key={i} 
-                variants={cardLift}
-                className="relative bg-card overflow-hidden border border-ink/10 rounded-2xl p-8 md:p-10 hover:border-brand/30 transition-all duration-500 group shadow-sm hover:shadow-lg"
-              >
-                {/* Fondo de estatua */}
-                <div className="absolute inset-0 z-0 opacity-40 mix-blend-multiply transition-transform duration-700 group-hover:scale-105">
-                  <img src={card.img} alt={card.title} className="w-full h-full object-cover object-center" />
-                </div>
-                {/* Degradado para asegurar que el texto sea perfectamente legible sobre la estatua */}
-                <div className="absolute inset-0 z-0 bg-gradient-to-t from-card via-card/80 to-card/20 md:via-card/60"></div>
-
-                <div className="relative z-10 flex flex-col h-full justify-end pt-12 md:pt-16">
-                  <div className="w-14 h-14 bg-ink text-bone rounded-xl flex items-center justify-center mb-6 group-hover:-translate-y-2 group-hover:bg-brand transition-all duration-500 shadow-md">
-                    <card.icon className="w-7 h-7" />
-                  </div>
-                  <h3 className="font-display font-bold text-2xl text-ink mb-3">{card.title}</h3>
-                  <p className="text-ink/90 font-medium leading-relaxed">{card.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 3. QUÉ INCLUYE */}
-      <section id="que-incluye" className="py-24 lg:py-32 bg-ink text-bone relative overflow-hidden">
-        <div className="grid-tech absolute inset-0 opacity-10 pointer-events-none"></div>
-        <div className="container relative z-10 mx-auto px-6">
-          <motion.div 
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="text-center max-w-3xl mx-auto mb-16"
-          >
-            <motion.h2 variants={revealUp} className="font-display font-semibold text-[32px] md:text-[42px] leading-tight mb-6">
-              ¿Qué incluye tu sitio web profesional?
-            </motion.h2>
-            <motion.p variants={revealUp} className="text-lg text-bone/70">
-              Creamos una página enfocada en presentar tu negocio con claridad, autoridad y una experiencia visual cuidada.
-            </motion.p>
-          </motion.div>
-
-          <motion.div 
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={staggerContainer}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {[
-              { t: "Diseño web profesional adaptado a tu marca", i: LayoutTemplate, img: feat1 },
-              { t: "Versión móvil responsive", i: Smartphone, img: feat2 },
-              { t: "Dominio .com o .mx sujeto a disponibilidad", i: Globe, img: feat3 },
-              { t: "Hosting incluido por un año", i: Check, img: feat4 },
-              { t: "Correo corporativo incluido", i: Mail, img: feat5 },
-              { t: "Buen copy (neuromarketing)", i: PenTool, img: feat6 },
-              { t: "Hasta 5 secciones estratégicas", i: Layers, img: feat6 },
-              { t: "Formulario de contacto", i: Check, img: feat7 },
-              { t: "Botón directo a WhatsApp", i: MessageCircle, img: feat8 },
-              { t: "Google Maps integrado", i: MapPin, img: feat9 },
-              { t: "Integración a redes sociales", i: Instagram, img: feat10 },
-              { t: "Galería de fotos", i: ImageIcon, img: feat11 },
-              { t: "Catálogo de servicios", i: Check, img: feat6 },
-              { t: "Testimonios", i: Check, img: feat7 },
-              { t: "Mantenimiento incluido durante el año", i: ShieldCheck, img: feat4 },
-              { t: "Preparada para medición digital", i: Search, img: feat2 },
-            ].map((item, idx) => (
-              <motion.div 
-                key={idx}
-                variants={revealUp}
-                className="relative overflow-hidden rounded-2xl border border-bone/10 group flex items-end min-h-[120px] md:min-h-[180px] p-5 md:p-6 hover:border-brand/40 transition-all duration-500 shadow-md hover:shadow-lg"
-              >
-                {/* Background Image Layer */}
-                <div className="absolute inset-0 z-0">
-                  <img src={item.img} alt={item.t} className="w-full h-full object-cover opacity-30 mix-blend-luminosity group-hover:scale-110 group-hover:opacity-40 transition-all duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/10"></div>
-                </div>
-                
-                {/* Content */}
-                <div className="relative z-10 flex flex-col gap-2 md:gap-3 w-full">
-                  <div className="w-8 h-8 md:w-10 md:h-10 bg-brand/30 backdrop-blur-md rounded-lg flex items-center justify-center text-brand mb-1 group-hover:bg-brand group-hover:text-bone transition-all duration-500">
-                    <item.i className="w-4 h-4 md:w-5 md:h-5" />
-                  </div>
-                  <span className="text-sm md:text-base font-semibold leading-tight text-bone drop-shadow-md">{item.t}</span>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 4. INVERSIÓN */}
-      <section className="py-20 lg:py-32 relative" data-event="pricing_view">
+      {/* 2. INVERSIÓN Y GARANTÍA */}
+      <section className="py-20 relative bg-ink/5" data-event="pricing_view">
         <div className="container mx-auto px-4 sm:px-6 flex justify-center">
           <motion.div 
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="w-full max-w-4xl bg-white border-2 border-brand/10 rounded-[2rem] p-6 md:p-16 text-center shadow-xl relative overflow-hidden"
+            className="w-full max-w-4xl bg-white border-2 border-brand/10 rounded-[2rem] p-6 md:p-12 text-center shadow-xl relative overflow-hidden"
           >
-            {/* Decorative background element */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-brand/10 rounded-full blur-[80px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
             
             <motion.h2 variants={revealUp} className="font-display font-bold text-[28px] md:text-[42px] leading-tight mb-3 text-ink">
               Inversión del servicio
             </motion.h2>
-            <motion.p variants={revealUp} className="text-base md:text-lg text-ink/70 mb-6 max-w-2xl mx-auto">
-              El desarrollo de tu sitio web profesional tiene una inversión de:
+            <motion.p variants={revealUp} className="text-base md:text-lg text-ink/70 mb-2 max-w-2xl mx-auto">
+              El desarrollo completo de tu sitio web profesional tiene una inversión de:
             </motion.p>
             
             <motion.div variants={revealUp} className="mb-8">
@@ -406,16 +260,14 @@ export default function LandingSitioWeb() {
                 $3,600 <span className="text-xl md:text-2xl text-ink/40 tracking-normal font-sans font-semibold uppercase mt-2 md:mt-4">mxn</span>
               </span>
             </motion.div>
-            
-            <motion.p variants={revealUp} className="text-sm md:text-base text-ink/80 font-medium mb-10 bg-ink/5 py-3 px-6 rounded-full inline-block">
-              El pago se divide en dos partes: 50% para iniciar el proyecto y 50% al finalizar.
-            </motion.p>
 
             <motion.div variants={revealUp} className="bg-brand/5 border border-brand/20 p-5 md:p-6 rounded-2xl max-w-2xl mx-auto mb-10 text-left flex flex-col sm:flex-row gap-3 sm:gap-4 items-start shadow-sm">
               <ShieldCheck className="w-7 h-7 md:w-8 md:h-8 text-brand flex-shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-bold text-ink mb-1 text-base md:text-lg">Garantía sin riesgo</h4>
-                <p className="text-sm md:text-base text-ink/80 leading-relaxed">Antes de iniciar el pago, trabajamos una versión preliminar para que puedas ver la dirección visual de tu sitio. <strong>Si no te gusta esa propuesta inicial, no pagas.</strong></p>
+                <h4 className="font-bold text-ink mb-1 text-base md:text-lg">0% de anticipo para empezar</h4>
+                <p className="text-sm md:text-base text-ink/80 leading-relaxed">
+                  <strong>No pedimos absolutamente nada de anticipo para iniciar.</strong> Te entregamos una primera revisión visual de tu sitio. Si la propuesta te gusta y decides avanzar, entonces empezamos con el 50% de anticipo y el resto al finalizar.
+                </p>
               </div>
             </motion.div>
             
@@ -428,22 +280,125 @@ export default function LandingSitioWeb() {
                 data-event="whatsapp_click"
                 id="cta-price-whatsapp"
               >
-                Quiero avanzar con mi sitio web
+                Quiero ver una propuesta gratis
               </Button>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
+      {/* 3. EJEMPLOS Y PORTAFOLIO */}
+      <section className="py-20 relative bg-white overflow-hidden border-t border-ink/5">
+        <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <motion.div 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="text-left"
+          >
+            <motion.div variants={revealUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ink/5 text-ink/70 text-sm font-semibold mb-6">
+              <Smartphone className="w-4 h-4" /> Diseño responsivo
+            </motion.div>
+            <motion.h2 variants={revealUp} className="font-display font-bold text-[32px] md:text-[42px] leading-tight mb-6">
+              Ejemplos de portafolio y visualización
+            </motion.h2>
+            <motion.p variants={revealUp} className="text-lg text-ink/80 mb-6 leading-relaxed">
+              Tu sitio web estará totalmente <strong>optimizado y responsivo</strong>. Se verá increíble tanto en celulares como en computadoras de escritorio, garantizando que tus clientes tengan la mejor experiencia al navegar.
+            </motion.p>
+            <motion.div variants={revealUp} className="flex flex-wrap items-center gap-6 mt-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 hover:text-[#4285F4] transition-colors" title="Google"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 hover:text-[#1877F2] transition-colors" title="Facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 hover:text-[#E4405F] transition-colors" title="Instagram"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </motion.div>
+          </motion.div>
+          <motion.div 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={revealUp}
+            className="relative"
+          >
+            <div className="absolute inset-0 bg-brand/10 blur-[60px] rounded-full z-0"></div>
+            <img src={mockupImg} alt="Mockup de Portafolio Web" className="w-full h-auto drop-shadow-2xl rounded-2xl relative z-10" />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 4. QUÉ INCLUYE */}
+      <section id="que-incluye" className="py-20 bg-ink text-bone relative overflow-hidden">
+        <div className="grid-tech absolute inset-0 opacity-10 pointer-events-none"></div>
+        <div className="container relative z-10 mx-auto px-6">
+          <motion.div 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="text-center max-w-3xl mx-auto mb-12"
+          >
+            <motion.h2 variants={revealUp} className="font-display font-semibold text-[32px] md:text-[42px] leading-tight mb-4">
+              ¿Qué incluye tu sitio web profesional?
+            </motion.h2>
+          </motion.div>
+
+          <motion.div 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={revealUp}
+            className="mb-12 max-w-4xl mx-auto bg-card/5 border border-bone/20 p-6 md:p-8 rounded-3xl flex flex-col md:flex-row gap-6 items-center shadow-lg"
+          >
+            <div className="bg-brand/20 p-5 rounded-full flex-shrink-0"><Mail className="w-10 h-10 text-brand" /></div>
+            <div className="text-left">
+              <h3 className="font-bold text-xl md:text-2xl mb-2 text-bone">Correo Corporativo (Evita el Spam)</h3>
+              <p className="text-bone/80 text-base md:text-lg leading-relaxed">
+                ¿Sabías que si tienes una empresa y mandas correos desde un Gmail o Hotmail, Google los detecta como <strong>SPAM</strong>? 
+                Al incluir un correo corporativo (ej. <em>contacto@tuempresa.com</em>), generas presencia profesional y aseguras que tus presupuestos y mensajes sí lleguen a la bandeja principal de tus clientes.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={staggerContainer}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+          >
+            {[
+              { t: "Diseño web adaptado a tu marca", i: LayoutTemplate },
+              { t: "Dominio .com o .mx", i: Globe },
+              { t: "Hosting por un año", i: Check },
+              { t: "Formulario de contacto", i: PenTool },
+              { t: "Botón directo a WhatsApp", i: MessageCircle },
+              { t: "Google Maps integrado", i: MapPin },
+              { t: "Integración de Redes (FB, IG)", i: Facebook },
+              { t: "Mantenimiento incluido", i: ShieldCheck }
+            ].map((item, idx) => (
+              <motion.div 
+                key={idx}
+                variants={revealUp}
+                className="relative overflow-hidden rounded-2xl border border-bone/10 bg-bone/5 flex items-center gap-4 p-5 hover:border-brand/40 transition-all duration-300"
+              >
+                <div className="w-10 h-10 bg-brand/20 rounded-lg flex items-center justify-center text-brand flex-shrink-0">
+                  <item.i className="w-5 h-5" />
+                </div>
+                <span className="text-sm font-semibold leading-tight text-bone">{item.t}</span>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* 5. PROCESO */}
-      <section className="py-24 lg:py-32 relative border-t border-ink/5">
+      <section className="py-20 relative">
         <div className="container mx-auto px-6">
           <motion.div 
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="text-center max-w-3xl mx-auto mb-20"
+            className="text-center max-w-3xl mx-auto mb-16"
           >
             <motion.h2 variants={revealUp} className="font-display font-semibold text-[32px] md:text-[42px] leading-tight">
               Así trabajamos tu sitio
@@ -451,7 +406,6 @@ export default function LandingSitioWeb() {
           </motion.div>
 
           <div className="max-w-4xl mx-auto relative">
-            {/* Timeline line */}
             <motion.div 
               initial="hidden"
               whileInView="show"
@@ -466,14 +420,12 @@ export default function LandingSitioWeb() {
               whileInView="show"
               viewport={{ once: true, margin: "-50px" }}
               variants={staggerContainer}
-              className="space-y-12 relative"
+              className="space-y-10 relative"
             >
               {[
-                { s: "01", t: "Revisamos tu negocio", d: "Analizamos tus respuestas, tu giro, tus servicios y la forma correcta de presentar tu empresa." },
-                { s: "02", t: "Preparamos una versión preliminar", d: "Creamos una primera propuesta visual para que veas hacia dónde puede ir tu sitio." },
-                { s: "03", t: "Iniciamos el desarrollo", d: "Si la propuesta te gusta, avanzamos con el 50% inicial y organizamos la información de tu empresa." },
-                { s: "04", t: "Integramos contenido y funciones", d: "Agregamos servicios, contacto, WhatsApp, formulario, ubicación, redes, fotos y demás elementos necesarios." },
-                { s: "05", t: "Entregamos tu sitio listo", d: "Al finalizar, se liquida el 50% restante y se entrega el sitio con su dominio y configuración correspondiente." }
+                { s: "01", t: "Primera revisión visual", d: "Creamos una propuesta sin anticipo para que veas la dirección de diseño." },
+                { s: "02", t: "Iniciamos desarrollo (50%)", d: "Si apruebas el diseño, arrancamos formalmente el proyecto." },
+                { s: "03", t: "Entrega y publicación", d: "Finalizamos detalles, liquidas el 50% restante y lanzamos tu página web." }
               ].map((step, idx) => (
                 <motion.div key={idx} variants={revealUp} className={`flex flex-col sm:flex-row gap-6 sm:gap-12 relative ${idx % 2 === 0 ? "md:flex-row-reverse text-left md:text-right" : "text-left"}`}>
                   <div className={`hidden md:block w-1/2 ${idx % 2 === 0 ? "pr-12" : "pl-12"}`}></div>
@@ -481,8 +433,8 @@ export default function LandingSitioWeb() {
                     {step.s}
                   </div>
                   <div className={`md:w-1/2 pl-14 sm:pl-0 ${idx % 2 === 0 ? "md:pl-12" : "md:pr-12"}`}>
-                    <h3 className="font-display font-semibold text-xl mb-2 pt-2">{step.t}</h3>
-                    <p className="text-ink/70 leading-relaxed">{step.d}</p>
+                    <h3 className="font-display font-semibold text-xl mb-1 pt-2">{step.t}</h3>
+                    <p className="text-ink/70 leading-relaxed text-sm md:text-base">{step.d}</p>
                   </div>
                 </motion.div>
               ))}
@@ -491,84 +443,15 @@ export default function LandingSitioWeb() {
         </div>
       </section>
 
-      {/* 6. PARA QUIÉN ES */}
-      <section className="py-24 bg-ink/5 relative border-y border-ink/10">
-        <div className="container mx-auto px-6">
-          <motion.div 
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="text-center max-w-3xl mx-auto mb-16"
-          >
-            <motion.h2 variants={revealUp} className="font-display font-semibold text-[30px] md:text-[38px] leading-tight mb-6">
-              Este servicio es para negocios que quieren verse más profesionales
-            </motion.h2>
-            <motion.p variants={revealUp} className="text-lg text-ink/70">
-              Trabajamos con empresas, negocios locales, clínicas, despachos, constructoras, restaurantes, agencias, talleres, consultorios y servicios profesionales que quieren una presencia digital seria.
-            </motion.p>
-          </motion.div>
-
-          <motion.div 
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={staggerContainer}
-            className="flex flex-wrap gap-4 justify-center max-w-4xl mx-auto"
-          >
-            {[
-              "Empresas que quieren presentarse mejor",
-              "Negocios que necesitan una página para enviar a sus clientes",
-              "Servicios que quieren explicar mejor lo que ofrecen",
-              "Marcas que necesitan verse más confiables",
-              "Locales que quieren facilitar ubicación, contacto y WhatsApp",
-              "Empresas que quieren dejar de mandar toda la información manualmente"
-            ].map((chip, idx) => (
-              <motion.div 
-                key={idx}
-                variants={revealUp}
-                className="bg-card border border-ink/10 px-5 py-3 rounded-full text-sm font-medium text-ink/80 shadow-sm flex items-center gap-2"
-              >
-                <CheckCircle2 className="w-4 h-4 text-brand" />
-                {chip}
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 7. GARANTÍA */}
-      <section className="py-24 relative overflow-hidden bg-brand text-bone">
-        <div className="noise z-0 opacity-10"></div>
-        <div className="container relative z-10 mx-auto px-6 text-center max-w-4xl">
-          <motion.div 
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-          >
-            <motion.h2 variants={revealUp} className="font-display font-semibold text-[32px] md:text-[46px] leading-tight mb-6">
-              Primero ves una dirección visual. Después decides.
-            </motion.h2>
-            <motion.p variants={revealUp} className="text-lg md:text-xl text-bone/90 mb-4 font-medium">
-              No te pedimos que avances a ciegas. Creamos una versión preliminar para que puedas ver la propuesta inicial de tu sitio web. Si esa primera dirección no te gusta, no pagas.
-            </motion.p>
-            <motion.p variants={revealUp} className="text-base text-bone/70">
-              La idea es que tengas claridad antes de iniciar el proyecto formalmente.
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 8. FAQ */}
-      <section className="py-24 lg:py-32 relative">
+      {/* 6. FAQ */}
+      <section className="py-20 relative bg-ink/5 border-t border-ink/5">
         <div className="container mx-auto px-6 max-w-3xl">
           <motion.div 
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="mb-12 text-center"
+            className="mb-10 text-center"
           >
             <motion.h2 variants={revealUp} className="font-display font-semibold text-[32px] md:text-[42px] leading-tight">
               Preguntas frecuentes
@@ -583,18 +466,12 @@ export default function LandingSitioWeb() {
           >
             <Accordion type="single" collapsible className="w-full space-y-4">
               {[
-                { q: "¿El precio incluye dominio?", a: "Sí. Incluye dominio .com o .mx, sujeto a disponibilidad." },
-                { q: "¿Incluye hosting?", a: "Sí. Incluye hosting por un año." },
-                { q: "¿Incluye correo corporativo?", a: "Sí. Incluye correo corporativo con tu dominio." },
-                { q: "¿Incluye WhatsApp?", a: "Sí. El sitio puede incluir botón directo a WhatsApp para que tus clientes te contacten fácilmente." },
-                { q: "¿Incluye formulario de contacto?", a: "Sí. Integramos formulario para que las personas puedan dejar sus datos o solicitar información." },
-                { q: "¿Incluye Google Maps?", a: "Sí. Si tu negocio tiene ubicación física, podemos integrar el mapa para facilitar la visita o contacto." },
-                { q: "¿Puedo mostrar fotos o videos?", a: "Sí. Podemos integrar galería de fotos y videos cuando el material esté disponible y sea adecuado para el sitio." },
-                { q: "¿Incluye Pixel de Meta?", a: "El sitio queda preparado para herramientas de medición digital. La instalación avanzada de Pixel puede cotizarse aparte si el cliente requiere configuración publicitaria específica." },
-                { q: "¿Cuánto tarda?", a: "Podemos trabajar una versión preliminar en menos de 48 horas, dependiendo de la información disponible del negocio." },
-                { q: "¿Qué necesito para empezar?", a: "Nombre del negocio, giro, servicios principales, WhatsApp, ubicación, redes sociales, colores de marca si los tienes, fotos y textos disponibles." },
+                { q: "¿Tengo que pagar un anticipo antes de ver el diseño?", a: "No. Te entregamos una primera revisión visual sin costo. Si te gusta, empezamos con el 50%." },
+                { q: "¿El precio incluye dominio y hosting?", a: "Sí. Incluye dominio .com o .mx y hosting por el primer año." },
+                { q: "¿Incluye correo corporativo?", a: "Sí, fundamental para evitar que tus correos lleguen como spam a tus clientes." },
+                { q: "¿Mi página se verá bien en celulares?", a: "Totalmente. El diseño es 100% responsivo y optimizado para móviles y computadoras." }
               ].map((faq, i) => (
-                <AccordionItem key={i} value={`item-${i}`} className="bg-card border border-ink/10 rounded-xl px-6 data-[state=open]:shadow-sm transition-all">
+                <AccordionItem key={i} value={`item-${i}`} className="bg-white border border-ink/10 rounded-xl px-6 data-[state=open]:shadow-sm transition-all">
                   <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline py-5 [&[data-state=open]]:text-brand">
                     {faq.q}
                   </AccordionTrigger>
@@ -607,6 +484,7 @@ export default function LandingSitioWeb() {
           </motion.div>
         </div>
       </section>
+
 
       {/* 9. CIERRE */}
       <section className="py-24 lg:py-32 relative bg-ink text-bone overflow-hidden">
