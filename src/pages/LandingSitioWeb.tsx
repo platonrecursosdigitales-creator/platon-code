@@ -29,6 +29,7 @@ import {
 } from "@/lib/motion";
 import statueImg from "@/assets/imagenlandding.png";
 import { SocialStatue } from "@/components/site/SocialStatue";
+import { SocialStatue } from "@/components/site/SocialStatue";
 import statueAthena from "@/assets/statue_athena.png";
 import statueApollo from "@/assets/statue_apollo.png";
 import statueHermes from "@/assets/statue_hermes.png";
@@ -145,6 +146,9 @@ export default function LandingSitioWeb() {
             maskImage: "linear-gradient(to top, transparent 0%, black 15%, black 100%)",
           }}
         />
+
+        {/* Network & Social Icons Over Statue */}
+        <SocialStatue />
 
         <div className="container relative z-10 mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full mt-10 lg:mt-0">
           {/* Left Text */}
