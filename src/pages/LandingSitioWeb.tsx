@@ -274,7 +274,7 @@ export default function LandingSitioWeb() {
             
             <motion.div variants={revealUp} className="mb-8">
               <span className="text-[48px] md:text-[72px] font-display font-black text-brand tracking-tighter leading-none flex items-center justify-center gap-2 drop-shadow-sm">
-                $3,600 <span className="text-xl md:text-2xl text-ink/40 tracking-normal font-sans font-semibold uppercase mt-2 md:mt-4">mxn</span>
+                $3,600 <span className="text-xl md:text-2xl text-ink/40 tracking-normal  font-semibold uppercase mt-2 md:mt-4">mxn</span>
               </span>
             </motion.div>
 
@@ -443,11 +443,11 @@ export default function LandingSitioWeb() {
              <div className="h-2 w-full bg-brand"></div>
              <div className="p-6 md:p-12 relative z-10">
                <div className="text-center border-b border-ink/10 pb-8 mb-8">
-                  <h2 className="font-serif text-2xl md:text-3xl font-bold text-ink mb-2">Condiciones de Servicio y Entregables</h2>
-                  <p className="font-sans text-sm text-ink/60 tracking-widest uppercase">Platon Code - $3,600 MXN</p>
+                  <h2 className="font-display text-2xl md:text-3xl font-bold text-ink mb-2">Condiciones de Servicio y Entregables</h2>
+                  <p className=" text-sm text-ink/60 tracking-widest uppercase">Platon Code - $3,600 MXN</p>
                </div>
 
-               <Tabs defaultValue="diseno" className="w-full relative z-10 font-sans">
+               <Tabs defaultValue="diseno" className="w-full relative z-10 ">
                 <TabsList className="flex flex-wrap md:grid w-full grid-cols-2 md:grid-cols-4 h-auto p-1 bg-bone rounded-lg mb-8 gap-1">
                   <TabsTrigger value="diseno" className="rounded-md py-2 data-[state=active]:bg-white data-[state=active]:text-brand data-[state=active]:shadow-sm text-xs sm:text-sm font-semibold">1. Entregables</TabsTrigger>
                   <TabsTrigger value="hosting" className="rounded-md py-2 data-[state=active]:bg-white data-[state=active]:text-brand data-[state=active]:shadow-sm text-xs sm:text-sm font-semibold">2. Dominio/Hosting</TabsTrigger>
@@ -457,12 +457,12 @@ export default function LandingSitioWeb() {
                 <div className="p-2 sm:p-4">
                   <TabsContent value="diseno" className="space-y-8 mt-0 animate-in fade-in">
                     <div className="border-l-4 border-brand pl-4">
-                      <h3 className="text-lg font-serif font-bold text-ink mb-2">Sitio web de hasta 4 secciones</h3>
+                      <h3 className="text-lg font-display font-bold text-ink mb-2">Sitio web de hasta 4 secciones</h3>
                       <p className="text-ink/80 text-sm leading-relaxed mb-1">El cliente puede elegir las secciones que necesite, por ejemplo: Inicio, Nosotros, Servicios, Proyectos, Galería, Preguntas frecuentes, Contacto o Ubicación.</p>
                       <p className="text-ink/50 text-xs italic">La distribución se define de acuerdo con las necesidades de cada empresa.</p>
                     </div>
                     <div className="border-l-4 border-brand pl-4">
-                      <h3 className="text-lg font-serif font-bold text-ink mb-3">Diseño profesional y personalizado</h3>
+                      <h3 className="text-lg font-display font-bold text-ink mb-3">Diseño profesional y personalizado</h3>
                       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-ink/80 text-sm leading-relaxed">
                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5"/> Diseño adaptado a la identidad corporativa.</li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5"/> Diseño 100% responsivo (Mobile First).</li>
@@ -476,15 +476,15 @@ export default function LandingSitioWeb() {
                   
                   <TabsContent value="hosting" className="space-y-8 mt-0 animate-in fade-in">
                     <div className="border-l-4 border-brand pl-4">
-                      <h3 className="text-lg font-serif font-bold text-ink mb-2">Dominio Registrado (Primer Año)</h3>
+                      <h3 className="text-lg font-display font-bold text-ink mb-2">Dominio Registrado (Primer Año)</h3>
                       <p className="text-ink/80 text-sm leading-relaxed">Se incluye el registro de un dominio disponible con extensión <strong>.com</strong>, <strong>.com.mx</strong> o <strong>.mx</strong>, sujeto a disponibilidad y precio regular del registrador.</p>
                     </div>
                     <div className="border-l-4 border-brand pl-4">
-                      <h3 className="text-lg font-serif font-bold text-ink mb-2">Hosting y Certificado SSL (Primer Año)</h3>
+                      <h3 className="text-lg font-display font-bold text-ink mb-2">Hosting y Certificado SSL (Primer Año)</h3>
                       <p className="text-ink/80 text-sm leading-relaxed">El alojamiento web de alta velocidad está incluido sin costo adicional mientras el sitio permanezca administrado por Platon Code. Incluye cifrado SSL de seguridad.</p>
                     </div>
                     <div className="bg-brand/5 p-5 rounded-lg border border-brand/10">
-                      <h3 className="text-base font-serif font-bold text-brand mb-2 flex items-center gap-2"><Mail className="w-4 h-4"/> Correo Corporativo Incluido (1er año)</h3>
+                      <h3 className="text-base font-display font-bold text-brand mb-2 flex items-center gap-2"><Mail className="w-4 h-4"/> Correo Corporativo Incluido (1er año)</h3>
                       <p className="text-ink/80 text-sm mb-2">Se incluye una cuenta de correo profesional con el dominio de la empresa (ej. <em>contacto@tuempresa.com</em>).</p>
                       <p className="text-xs text-ink/60 italic leading-relaxed">Nota de Configuración: El cliente deberá proporcionar obligatoriamente una cuenta de Gmail activa. Esta cuenta se utilizará para accesos, recuperación, envío de información y administración del servicio.</p>
                     </div>
@@ -492,7 +492,7 @@ export default function LandingSitioWeb() {
 
                   <TabsContent value="optimizacion" className="space-y-6 mt-0 animate-in fade-in">
                     <div className="border-l-4 border-brand pl-4">
-                      <h3 className="text-lg font-serif font-bold text-ink mb-4">Protocolos de Optimización Técnica</h3>
+                      <h3 className="text-lg font-display font-bold text-ink mb-4">Protocolos de Optimización Técnica</h3>
                       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-ink/80 text-sm leading-relaxed">
                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5"/> Optimización de velocidad y visualización.</li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5"/> Configuración básica de SEO (Buscadores).</li>
@@ -508,7 +508,7 @@ export default function LandingSitioWeb() {
 
                   <TabsContent value="beneficios" className="space-y-6 mt-0 animate-in fade-in">
                     <div className="border-l-4 border-brand pl-4">
-                      <h3 className="text-lg font-serif font-bold text-ink mb-4">Beneficios Corporativos Exclusivos</h3>
+                      <h3 className="text-lg font-display font-bold text-ink mb-4">Beneficios Corporativos Exclusivos</h3>
                       <ul className="space-y-3 text-ink/80 text-sm leading-relaxed">
                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5"/> <strong>Atención Prioritaria:</strong> Acceso directo a nuestro equipo de trabajo para soporte.</li>
                         <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-brand shrink-0 mt-0.5"/> <strong>Descuentos Publicitarios:</strong> Tarifas preferenciales en servicios de pauta y futuras campañas.</li>
@@ -521,13 +521,13 @@ export default function LandingSitioWeb() {
                </Tabs>
 
                <div className="mt-12 pt-8 border-t-2 border-dashed border-ink/10">
-                  <h2 className="font-serif text-2xl font-bold text-ink mb-6 text-center">Anexo: Mantenimiento y Renovaciones</h2>
+                  <h2 className="font-display text-2xl font-bold text-ink mb-6 text-center">Anexo: Mantenimiento y Renovaciones</h2>
                   <Accordion type="single" collapsible className="w-full space-y-3">
                      <AccordionItem value="item-1" className="bg-bone/30 border border-ink/10 rounded-lg px-4 sm:px-6 data-[state=open]:shadow-sm transition-all">
-                       <AccordionTrigger className="text-left font-serif font-semibold text-base sm:text-lg hover:no-underline py-4 [&[data-state=open]]:text-brand">
+                       <AccordionTrigger className="text-left font-display font-semibold text-base sm:text-lg hover:no-underline py-4 [&[data-state=open]]:text-brand">
                          Mantenimiento incluido (Primer Año)
                        </AccordionTrigger>
-                       <AccordionContent className="text-ink/80 text-sm sm:text-base pb-5 space-y-4 font-sans">
+                       <AccordionContent className="text-ink/80 text-sm sm:text-base pb-5 space-y-4 ">
                          <p>Durante los primeros 12 meses, el cliente podrá solicitar actualizaciones relacionadas con la información existente del sitio.</p>
                          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="bg-white p-4 rounded-md border border-green-100 shadow-sm">
@@ -560,10 +560,10 @@ export default function LandingSitioWeb() {
                      </AccordionItem>
 
                      <AccordionItem value="item-2" className="bg-bone/30 border border-ink/10 rounded-lg px-4 sm:px-6 data-[state=open]:shadow-sm transition-all">
-                       <AccordionTrigger className="text-left font-serif font-semibold text-base sm:text-lg hover:no-underline py-4 [&[data-state=open]]:text-brand">
+                       <AccordionTrigger className="text-left font-display font-semibold text-base sm:text-lg hover:no-underline py-4 [&[data-state=open]]:text-brand">
                          Costos y Renovaciones (Después del 1er Año)
                        </AccordionTrigger>
-                       <AccordionContent className="text-ink/80 text-sm sm:text-base pb-5 space-y-4 font-sans">
+                       <AccordionContent className="text-ink/80 text-sm sm:text-base pb-5 space-y-4 ">
                          <p>El desarrollo inicial del sitio web es un pago único. Después del primer año solamente se cubren las renovaciones tecnológicas necesarias para mantener la presencia online activa.</p>
                          <ul className="space-y-4">
                             <li className="flex gap-3 bg-white p-3 rounded border border-ink/5">
@@ -592,10 +592,10 @@ export default function LandingSitioWeb() {
                      </AccordionItem>
 
                      <AccordionItem value="item-3" className="bg-bone/30 border border-ink/10 rounded-lg px-4 sm:px-6 data-[state=open]:shadow-sm transition-all">
-                       <AccordionTrigger className="text-left font-serif font-semibold text-base sm:text-lg hover:no-underline py-4 [&[data-state=open]]:text-brand">
+                       <AccordionTrigger className="text-left font-display font-semibold text-base sm:text-lg hover:no-underline py-4 [&[data-state=open]]:text-brand">
                          Tiempos de Entrega Formales
                        </AccordionTrigger>
-                       <AccordionContent className="text-ink/80 text-sm sm:text-base pb-5 font-sans">
+                       <AccordionContent className="text-ink/80 text-sm sm:text-base pb-5 ">
                          <p className="font-bold text-ink text-lg mb-2">Entrega estimada en 4 días hábiles.</p>
                          <p className="mb-2 leading-relaxed">El tiempo de entrega oficial de los 4 días comienza a correr exclusivamente cuando el cliente proporciona <strong>toda la información necesaria</strong> detallada en los requisitos iniciales (logotipo, imágenes, textos, datos, y accesos).</p>
                          <p className="text-xs text-red-500/80 bg-red-50 p-2 rounded">Nota: Los retrasos en la entrega de información por parte del cliente modificarán consecuentemente la fecha final de publicación.</p>
