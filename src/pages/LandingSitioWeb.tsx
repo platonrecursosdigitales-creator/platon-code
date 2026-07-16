@@ -33,6 +33,11 @@ import { SocialStatue } from "@/components/site/SocialStatue";
 import statueAthena from "@/assets/statue_athena.png";
 import statueApollo from "@/assets/statue_apollo.png";
 import statueHermes from "@/assets/statue_hermes.png";
+import portfolioMedina from "@/assets/portfolio_medina.png";
+import portfolioCaballero from "@/assets/portfolio_caballero.png";
+import portfolioSolec from "@/assets/portfolio_solec.png";
+import portfolioDental from "@/assets/portfolio_dental.png";
+import { ExternalLink } from "lucide-react";
 import mockupImg from "@/assets/portfolio_mockup.png";
 
 import feat1 from "@/assets/statue_feature_1_1782446390064.png";
@@ -294,40 +299,120 @@ export default function LandingSitioWeb() {
       </section>
 
       {/* 3. EJEMPLOS Y PORTAFOLIO */}
-      <section className="py-20 relative bg-white overflow-hidden border-t border-ink/5">
-        <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="py-24 relative bg-bone overflow-hidden border-t border-ink/5">
+        <div className="container mx-auto px-6">
           <motion.div 
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="text-left"
+            className="text-center max-w-3xl mx-auto mb-16"
           >
-            <motion.div variants={revealUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ink/5 text-ink/70 text-sm font-semibold mb-6">
-              <Smartphone className="w-4 h-4" /> Diseño responsivo
+            <motion.div variants={revealUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 text-brand text-sm font-semibold mb-6">
+              <LayoutTemplate className="w-4 h-4" /> Casos de xito
             </motion.div>
-            <motion.h2 variants={revealUp} className="font-display font-bold text-[32px] md:text-[42px] leading-tight mb-6">
-              Ejemplos de portafolio y visualización
+            <motion.h2 variants={revealUp} className="font-display font-bold text-[32px] md:text-[42px] leading-tight mb-6 text-ink">
+              Nuestro Portafolio de Clientes
             </motion.h2>
-            <motion.p variants={revealUp} className="text-lg text-ink/80 mb-6 leading-relaxed">
-              Tu sitio web estará totalmente <strong>optimizado y responsivo</strong>. Se verá increíble tanto en celulares como en computadoras de escritorio, garantizando que tus clientes tengan la mejor experiencia al navegar.
+            <motion.p variants={revealUp} className="text-lg text-ink/80 leading-relaxed">
+              Conoce algunos de los proyectos que hemos diseado para impulsar el xito de empresas y profesionales en internet.
             </motion.p>
-            <motion.div variants={revealUp} className="flex flex-wrap items-center gap-6 mt-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 hover:text-[#4285F4] transition-colors" title="Google"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 hover:text-[#1877F2] transition-colors" title="Facebook"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 hover:text-[#E4405F] transition-colors" title="Instagram"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            </motion.div>
           </motion.div>
-          <motion.div 
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={revealUp}
-            className="relative"
-          >
-            <div className="absolute inset-0 bg-brand/10 blur-[60px] rounded-full z-0"></div>
-            <img src={mockupImg} alt="Mockup de Portafolio Web" className="w-full h-auto drop-shadow-2xl rounded-2xl relative z-10" />
-          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Dr Medina */}
+            <motion.a 
+              href="https://www.drgilbertomedina.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={revealUp}
+              className="group relative bg-white rounded-3xl overflow-hidden border border-ink/5 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block"
+            >
+              <div className="aspect-[4/3] w-full overflow-hidden relative">
+                 <div className="absolute inset-0 bg-brand/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-center justify-center">
+                    <div className="bg-white text-brand px-6 py-3 rounded-full font-semibold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                       Visitar Sitio <ExternalLink className="w-4 h-4" />
+                    </div>
+                 </div>
+                 <img src={portfolioMedina} alt="Dr. Gilberto Medina" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold font-display text-ink mb-2 group-hover:text-brand transition-colors">Dr. Gil Medina Flores</h3>
+                <p className="text-ink/60 font-medium mb-4">Ciruga Plstica y Esttica</p>
+                <p className="text-sm text-ink/70 line-clamp-2">Sitio web premium con diseo elegante y moderno, optimizado para transmitir confianza y lujo en el sector mdico esttico.</p>
+              </div>
+            </motion.a>
+
+            {/* Dra Caballero */}
+            <motion.a 
+              href="https://dra.caballero.mx/"
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={revealUp}
+              className="group relative bg-white rounded-3xl overflow-hidden border border-ink/5 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block"
+            >
+              <div className="aspect-[4/3] w-full overflow-hidden relative">
+                 <div className="absolute inset-0 bg-brand/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-center justify-center">
+                    <div className="bg-white text-brand px-6 py-3 rounded-full font-semibold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                       Visitar Sitio <ExternalLink className="w-4 h-4" />
+                    </div>
+                 </div>
+                 <img src={portfolioCaballero} alt="Dra. Alaide Caballero" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold font-display text-ink mb-2 group-hover:text-brand transition-colors">Dra. Alaide Caballero</h3>
+                <p className="text-ink/60 font-medium mb-4">Otorrinolaringologa y Rinoplastia</p>
+                <p className="text-sm text-ink/70 line-clamp-2">Plataforma mdica limpia y profesional con enfoque en procedimientos faciales, destacando credenciales y galera de resultados.</p>
+              </div>
+            </motion.a>
+
+            {/* Constructora Solec */}
+            <motion.a 
+              href="https://www.constructorasolecmex.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={revealUp}
+              className="group relative bg-white rounded-3xl overflow-hidden border border-ink/5 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block"
+            >
+              <div className="aspect-[4/3] w-full overflow-hidden relative">
+                 <div className="absolute inset-0 bg-brand/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-center justify-center">
+                    <div className="bg-white text-brand px-6 py-3 rounded-full font-semibold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                       Visitar Sitio <ExternalLink className="w-4 h-4" />
+                    </div>
+                 </div>
+                 <img src={portfolioSolec} alt="Constructora Solec Mex" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold font-display text-ink mb-2 group-hover:text-brand transition-colors">Constructora Solec Mex</h3>
+                <p className="text-ink/60 font-medium mb-4">Ingeniera y Construccin Pesada</p>
+                <p className="text-sm text-ink/70 line-clamp-2">Diseo corporativo industrial, enfocado en mostrar proyectos a gran escala y solidez empresarial a nivel nacional.</p>
+              </div>
+            </motion.a>
+
+            {/* Dental Solutions */}
+            <motion.a 
+              href="https://dentalsolutionsirapuato.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={revealUp}
+              className="group relative bg-white rounded-3xl overflow-hidden border border-ink/5 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 block"
+            >
+              <div className="aspect-[4/3] w-full overflow-hidden relative">
+                 <div className="absolute inset-0 bg-brand/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-center justify-center">
+                    <div className="bg-white text-brand px-6 py-3 rounded-full font-semibold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                       Visitar Sitio <ExternalLink className="w-4 h-4" />
+                    </div>
+                 </div>
+                 <img src={portfolioDental} alt="Dental Solutions" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold font-display text-ink mb-2 group-hover:text-brand transition-colors">Dental Solutions</h3>
+                <p className="text-ink/60 font-medium mb-4">Clnica Dental Especializada</p>
+                <p className="text-sm text-ink/70 line-clamp-2">Sitio web clido y amigable que transmite tranquilidad a los pacientes, con un diseo moderno y enfocado en la atencin rpida.</p>
+              </div>
+            </motion.a>
+
+          </div>
         </div>
       </section>
 
