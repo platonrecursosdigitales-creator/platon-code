@@ -1,310 +1,40 @@
-import { useEffect, useState } from "react";
-import { trackEvent } from "@/lib/meta";
-import { motion, useReducedMotion } from "framer-motion";
-import {
-  ShieldCheck,
-  LayoutTemplate,
-  Globe,
-  Mail,
-  MapPin,
-  CheckCircle2,
-  Smartphone,
-  Check,
-  Search,
-  MessageCircle,
-  ImageIcon,
-  Layers,
-  Instagram,
-  PenTool,
-  Facebook
-} from "lucide-react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import {
-  easePremium,
-  revealUp,
-  staggerContainer,
-  cardLift,
-  lineDraw
-} from "@/lib/motion";
-import hostingerIcon from "@/assets/icons/hostinger.svg";
+const fs = require('fs');
+const path = require('path');
+
+const landingPath = path.join(__dirname, 'src', 'pages', 'LandingSitioWeb.tsx');
+let landing = fs.readFileSync(landingPath, 'utf-8');
+
+// Ensure Tabs is imported
+if (!landing.includes('TabsContent')) {
+  landing = landing.replace('import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";', 'import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";');
+}
+
+// Ensure new icons are imported
+if (!landing.includes('hostingerIcon')) {
+  const imports = `import hostingerIcon from "@/assets/icons/hostinger.svg";
 import mapsIcon from "@/assets/icons/maps.svg";
 import gmailIcon from "@/assets/icons/gmail.svg";
 import facebookIcon from "@/assets/icons/facebook.svg";
 import instagramIcon from "@/assets/icons/instagram.svg";
-import statueImg from "@/assets/imagenlandding.png";
-import { SocialStatue } from "@/components/site/SocialStatue";
-import { SocialStatue } from "@/components/site/SocialStatue";
-import statueAthena from "@/assets/statue_athena.png";
-import statueApollo from "@/assets/statue_apollo.png";
-import statueHermes from "@/assets/statue_hermes.png";
-import portfolioMedina from "@/assets/portfolio_medina_real.png";
-import portfolioCaballero from "@/assets/portfolio_caballero_real.png";
-import portfolioSolec from "@/assets/portfolio_solec_real.png";
-import portfolioDental from "@/assets/portfolio_dental_real.png";
-import { ExternalLink } from "lucide-react";
-import mockupImg from "@/assets/portfolio_mockup.png";
-
-import feat1 from "@/assets/statue_feature_1_1782446390064.png";
-import feat2 from "@/assets/statue_feature_2_1782446396960.png";
-import feat3 from "@/assets/statue_feature_3_1782446407391.png";
-import feat4 from "@/assets/statue_feature_4_1782446416347.png";
-import feat5 from "@/assets/statue_feature_5_1782446422681.png";
-import feat6 from "@/assets/statue_feature_6_1782446438896.png";
-import feat7 from "@/assets/statue_feature_7_1782446447372.png";
-import feat8 from "@/assets/statue_feature_8_1782446455249.png";
-import feat9 from "@/assets/statue_feature_9_1782446463174.png";
-import feat10 from "@/assets/statue_feature_10_1782446472623.png";
-import feat11 from "@/assets/statue_feature_11_1782446488110.png";
-
-const WHATSAPP_NUMBER = "5215668043332";
-const WHATSAPP_TEXT = "Hola, acabo de dejar mis datos y quiero avanzar con mi sitio web.";
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_TEXT)}`;
-
-function HeroTitle() {
-  const [typedCount, setTypedCount] = useState(0);
-  const reduce = useReducedMotion();
-  const speed = 40; // 40ms per char
-  const text = "Tu empresa necesita verse profesional en internet";
-  const prefix = "Tu empresa necesita verse ";
-  const target = "profesional";
-  const suffix = " en internet";
-
-  useEffect(() => {
-    if (reduce) {
-      setTypedCount(text.length);
-      return;
-    }
-    let i = 0;
-    // initial delay before typing starts to let animations settle
-    const delay = setTimeout(() => {
-      const interval = setInterval(() => {
-        i++;
-        setTypedCount(i);
-        if (i >= text.length) clearInterval(interval);
-      }, speed);
-      return () => clearInterval(interval);
-    }, 600);
-    return () => clearTimeout(delay);
-  }, [reduce, text]);
-
-  const renderPart = (partText: string, startIndex: number, isBrand: boolean) => {
-    const typedInPart = Math.max(0, Math.min(partText.length, typedCount - startIndex));
-    const visible = partText.slice(0, typedInPart);
-    const invisible = partText.slice(typedInPart);
-
-    const content = (
-      <>
-        <span>{visible}</span>
-        <span className="opacity-0">{invisible}</span>
-      </>
-    );
-
-    return isBrand ? <span className="text-brand">{content}</span> : <span>{content}</span>;
-  };
-
-  return (
-    <h1 className="font-display font-semibold text-ink leading-[1.05] tracking-tight text-[34px] sm:text-[42px] md:text-[48px] lg:text-[56px] text-balance mb-5 w-full drop-shadow-sm">
-      {renderPart(prefix, 0, false)}
-      {renderPart(target, prefix.length, true)}
-      {renderPart(suffix, prefix.length + target.length, false)}
-    </h1>
-  );
+`;
+  landing = landing.replace('import statueImg from "@/assets/imagenlandding.png";', imports + 'import statueImg from "@/assets/imagenlandding.png";');
 }
 
-export default function LandingSitioWeb() {
-  useEffect(() => {
-    document.title = "Sitio Web Profesional para Empresas | Platon Code";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", "Creamos sitios web profesionales para empresas y negocios que quieren verse más confiables, claros y preparados para recibir clientes desde internet.");
-    }
-    
-    // Track landing view
-    if (typeof window !== "undefined") {
-      trackEvent("ViewContent");
-      // Simulate dataLayer or custom event push if needed
-      console.log("Event: landing_view");
-    }
-  }, []);
+// Ensure real screenshots are imported
+if (!landing.includes('portfolio_medina_real')) {
+  landing = landing.replace('import portfolioMedina from "@/assets/portfolio_medina.png";', 'import portfolioMedina from "@/assets/portfolio_medina_real.png";');
+  landing = landing.replace('import portfolioCaballero from "@/assets/portfolio_caballero.png";', 'import portfolioCaballero from "@/assets/portfolio_caballero_real.png";');
+  landing = landing.replace('import portfolioSolec from "@/assets/portfolio_solec.png";', 'import portfolioSolec from "@/assets/portfolio_solec_real.png";');
+  landing = landing.replace('import portfolioDental from "@/assets/portfolio_dental.png";', 'import portfolioDental from "@/assets/portfolio_dental_real.png";');
+}
 
-  const handleWhatsAppClick = (eventLabel: string) => {
-    trackEvent("Contact");
-    console.log(`Event: whatsapp_click, source: ${eventLabel}`);
-    window.open(WHATSAPP_URL, "_blank", "noopener,noreferrer");
-  };
+// Slice off everything from 3. EJEMPLOS Y PORTAFOLIO
+const sliceIndex = landing.indexOf('{/* 3. EJEMPLOS Y PORTAFOLIO */}');
+if (sliceIndex !== -1) {
+  landing = landing.substring(0, sliceIndex);
+}
 
-  return (
-    <div className="bg-bone min-h-screen text-ink overflow-x-hidden selection:bg-brand selection:text-bone">
-      {/* 1. HERO SECTION */}
-      <section className="relative min-h-[100svh] w-full flex items-center lg:items-center overflow-hidden pt-12 pb-16 lg:pt-0 lg:pb-0">
-        <div className="noise z-0"></div>
-        {/* Glow behind statue */}
-        <div className="absolute right-[-10vw] top-1/2 -translate-y-1/2 w-[60vw] h-[60vw] bg-brand/10 rounded-full blur-[120px] pointer-events-none z-0 hidden lg:block"></div>
-        
-        {/* Network & Social Icons Behind Statue */}
-        <SocialStatue />
-
-        {/* Statue Image - Desktop Right, Mobile Bottom */}
-        <motion.img
-          src={statueImg}
-          alt="Platon Code Profesional"
-          draggable={false}
-          initial={{ opacity: 0, x: 50, filter: "blur(8px)" }}
-          animate={{ opacity: 0.95, x: 0, filter: "blur(0px)" }}
-          transition={{ duration: 1.8, ease: easePremium, delay: 0.2 }}
-          className="absolute lg:right-[-2vw] lg:bottom-0 lg:top-auto lg:translate-y-0 -right-[10%] bottom-0 top-auto opacity-100 lg:opacity-100 lg:h-[85vh] h-[55vh] w-auto object-contain object-bottom z-0"
-          style={{
-            WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 15%, black 100%)",
-            maskImage: "linear-gradient(to top, transparent 0%, black 15%, black 100%)",
-          }}
-        />
-
-        <div className="container relative z-10 mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full mt-10 lg:mt-0 pb-[65vh] lg:pb-0">
-          {/* Left Text */}
-          <motion.div 
-            variants={staggerContainer}
-            initial="hidden"
-            animate="show"
-            className="flex flex-col items-center text-center lg:items-start lg:text-left pt-10 lg:pt-0"
-          >
-            <motion.div variants={revealUp} className="flex flex-wrap gap-2 justify-center lg:justify-start mb-6 w-full">
-              <span className="text-[11px] sm:text-xs font-mono tracking-widest uppercase bg-ink/10 border border-ink/20 px-4 py-1.5 rounded-full text-ink font-semibold shadow-sm backdrop-blur-md">
-                Sitio web profesional
-              </span>
-              <span className="text-xs font-mono tracking-widest uppercase bg-ink/5 border border-ink/10 px-3 py-1 rounded-full text-ink/80 backdrop-blur-sm hidden sm:inline-block">
-                Versión preliminar antes de pagar
-              </span>
-            </motion.div>
-
-            <HeroTitle />
-
-            <motion.p 
-              variants={revealUp}
-              className="text-base sm:text-lg md:text-xl text-ink/80 max-w-xl text-pretty mb-8 leading-relaxed font-medium bg-bone/40 backdrop-blur-sm p-2 sm:p-0 rounded-lg"
-            >
-              Los clientes buscan en Google antes de decidir. Si no encuentran una página clara, profesional y bien presentada, la oportunidad puede terminar en manos de otra empresa.
-              <br/><br/>
-              En <span className="font-bold text-ink">Platon Code</span>, somos una agencia de desarrollo web dedicada a crear sitios web profesionales para que tu empresa se vea más sólida y haga más fácil que el cliente te contacte.
-            </motion.p>
-
-            <motion.div variants={revealUp} className="flex flex-col sm:flex-row gap-3 items-center lg:items-start w-full sm:w-auto">
-              <Button 
-                variant="hero" 
-                size="lg" 
-                className="w-full sm:w-auto text-base font-semibold px-8 h-14"
-                onClick={() => handleWhatsAppClick("cta-hero-whatsapp")}
-                data-event="whatsapp_click"
-                id="cta-hero-whatsapp"
-              >
-                Quiero avanzar con mi sitio web
-              </Button>
-              <Button 
-                variant="ghostGlow" 
-                size="lg" 
-                className="w-full sm:w-auto text-base font-semibold px-8 h-14"
-                onClick={() => {
-                  document.getElementById("que-incluye")?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Ver qué incluye
-              </Button>
-            </motion.div>
-
-            <motion.p variants={revealUp} className="mt-4 text-sm text-ink/50 flex items-center justify-center lg:justify-start gap-2">
-              <CheckCircle2 className="w-4 h-4 text-brand" />
-              Ya dejaste tus datos. Un asesor te contactará por WhatsApp.
-            </motion.p>
-            
-            {/* Promo Marketing */}
-            <motion.div variants={revealUp} className="mt-10 w-full max-w-xl bg-white/80 backdrop-blur-md border border-ink/10 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-5">
-                <div className="flex flex-col items-center sm:items-start w-full">
-                  <div className="flex items-center justify-center sm:justify-start gap-2 mb-2 w-full">
-                    <span className="bg-brand text-bone text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm">Incluido Gratis</span>
-                    <span className="text-sm font-semibold text-ink">Hosting y Dominio</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-sm text-ink/70">
-                    <span className="flex items-center gap-1"><Globe className="w-3 h-3" /> tuempresa.com</span>
-                  </div>
-                </div>
-                
-                <div className="w-full sm:w-px h-px sm:h-12 bg-ink/10"></div>
-                
-                <div className="flex flex-col items-center sm:items-start">
-                  <div className="flex items-center gap-2 mb-2">
-                     <span className="text-sm font-semibold text-ink">Correo Corporativo</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                     <span className="text-sm text-ink/70 font-mono flex items-center gap-1">
-                       <Mail className="w-3 h-3" /> contacto@tuempresa.com
-                     </span>
-                     <div className="flex items-center gap-1.5 ml-2 border-l border-ink/10 pl-2">
-                       <svg viewBox="0 0 24 24" fill="#EA4335" className="w-4 h-4" title="Gmail"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
-                       <svg viewBox="0 0 24 24" fill="#0078D4" className="w-4 h-4" title="Outlook"><path d="M7.155 3.328 17.65 0v16.142l-10.495 2.871V3.328ZM17.65 17.615v6.385l6.35-1.964v-13.8L17.65 9.77v7.845Zm-6.326-8.583c-.808 0-1.464.71-1.464 1.583 0 .874.656 1.583 1.464 1.583.807 0 1.463-.71 1.463-1.583 0-.874-.656-1.583-1.463-1.583Zm0-1.583c1.517 0 2.744 1.417 2.744 3.166 0 1.748-1.227 3.166-2.744 3.166-1.517 0-2.744-1.418-2.744-3.166 0-1.749 1.227-3.166 2.744-3.166Z"/></svg>
-                     </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 2. INVERSIÓN Y GARANTÍA */}
-      <section className="py-20 relative bg-ink/5" data-event="pricing_view">
-        <div className="container mx-auto px-4 sm:px-6 flex justify-center">
-          <motion.div 
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="w-full max-w-4xl bg-white border-2 border-brand/10 rounded-[2rem] p-6 md:p-12 text-center shadow-xl relative overflow-hidden"
-          >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-brand/10 rounded-full blur-[80px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
-            
-            <motion.h2 variants={revealUp} className="font-display font-bold text-[28px] md:text-[42px] leading-tight mb-3 text-ink">
-              Inversión del servicio
-            </motion.h2>
-            <motion.p variants={revealUp} className="text-base md:text-lg text-ink/70 mb-2 max-w-2xl mx-auto">
-              El desarrollo completo de tu sitio web profesional tiene una inversión de:
-            </motion.p>
-            
-            <motion.div variants={revealUp} className="mb-8">
-              <span className="text-[48px] md:text-[72px] font-display font-black text-brand tracking-tighter leading-none flex items-center justify-center gap-2 drop-shadow-sm">
-                $3,600 <span className="text-xl md:text-2xl text-ink/40 tracking-normal font-sans font-semibold uppercase mt-2 md:mt-4">mxn</span>
-              </span>
-            </motion.div>
-
-            <motion.div variants={revealUp} className="bg-brand/5 border border-brand/20 p-5 md:p-6 rounded-2xl max-w-2xl mx-auto mb-10 text-left flex flex-col sm:flex-row gap-3 sm:gap-4 items-start shadow-sm">
-              <ShieldCheck className="w-7 h-7 md:w-8 md:h-8 text-brand flex-shrink-0 mt-0.5" />
-              <div>
-                <h4 className="font-bold text-ink mb-1 text-base md:text-lg">0% de anticipo para empezar</h4>
-                <p className="text-sm md:text-base text-ink/80 leading-relaxed">
-                  <strong>No pedimos absolutamente nada de anticipo para iniciar.</strong> Te entregamos una primera revisión visual de tu sitio. Si la propuesta te gusta y decides avanzar, entonces empezamos con el 50% de anticipo y el resto al finalizar.
-                </p>
-              </div>
-            </motion.div>
-            
-            <motion.div variants={revealUp}>
-              <Button 
-                variant="hero" 
-                size="lg" 
-                className="w-full sm:w-auto text-base font-semibold px-12 h-14"
-                onClick={() => handleWhatsAppClick("cta-price-whatsapp")}
-                data-event="whatsapp_click"
-                id="cta-price-whatsapp"
-              >
-                Quiero ver una propuesta gratis
-              </Button>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      
+const newSections = `
       {/* 3. EJEMPLOS Y PORTAFOLIO */}
       <section className="py-20 relative bg-bone overflow-hidden border-t border-ink/5">
         <div className="container mx-auto px-4 sm:px-6">
@@ -695,3 +425,9 @@ export default function LandingSitioWeb() {
     </div>
   );
 }
+`;
+
+landing += newSections;
+
+fs.writeFileSync(landingPath, landing, 'utf-8');
+console.log('Fixed layout');
