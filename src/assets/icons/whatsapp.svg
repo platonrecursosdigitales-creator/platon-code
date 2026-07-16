@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8">
-<title>Wikimedia Error</title>
-<style>
-* { margin: 0; padding: 0; }
-body { background: #fff; font: 15px/1.6 sans-serif; color: #333; }
-.content { margin: 7% auto 0; padding: 2em 1em 1em; max-width: 640px; display: flex; flex-direction: row; flex-wrap: wrap; }
-.footer { clear: both; margin-top: 14%; border-top: 1px solid #e5e5e5; background: #f9f9f9; padding: 2em 0; font-size: 0.8em; text-align: center; }
-img { margin: 0 2em 2em 0; }
-a img { border: 0; }
-h1 { margin-top: 1em; font-size: 1.2em; }
-.content-text { flex: 1; }
-p { margin: 0.7em 0 1em 0; }
-a { color: #0645ad; text-decoration: none; }
-a:hover { text-decoration: underline; }
-code { font-family: sans-serif; }
-summary { font-weight: bold; cursor: pointer; }
-details[open] { background: #970302; color: #dfdedd; }
-.text-muted { color: #777; }
-@media (prefers-color-scheme: dark) {
-  a { color: #9e9eff; }
-  body { background: transparent; color: #ddd; }
-  .footer { border-top: 1px solid #444; background: #060606; }
-  #logo { filter: invert(1) hue-rotate(180deg); }
-  .text-muted { color: #888; }
-}
-</style>
-<meta name="color-scheme" content="light dark">
-<div class="content" role="main">
-<a href="https://www.wikimedia.org"><img id="logo" src="https://www.wikimedia.org/static/images/wmf-logo.png" srcset="https://www.wikimedia.org/static/images/wmf-logo-2x.png 2x" alt="Wikimedia" width="135" height="101">
-</a>
-<div class="content-text">
-<h1>Error</h1>
-
-<p>Too many requests (76af2b0)</p>
-</div>
-</div>
-<div class="footer"><p>If you report this error to the Wikimedia System Administrators, please include the details below.</p><p class="text-muted"><code>Request served via cp2056 cp2056, Varnish XID 496413219<br>Upstream caches: cp2056 int<br>Error: 429, Too many requests (76af2b0) at Thu, 16 Jul 2026 15:40:40 GMT<br><details><summary>Sensitive client information</summary>IP address: 187.252.6.158</details></code></p>
-</div>
-</html>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path fill="#25D366" d="M12.012 2c5.506 0 9.988 4.478 9.988 9.983 0 2.628-.99 5.097-2.793 6.973l-1.071 1.127 1.054 3.791-3.921-1.03-1.12.593A9.916 9.916 0 0112.012 21.98C6.506 21.98 2.025 17.502 2.025 12S6.506 2 12.012 2z"/>
+  <path fill="#FFF" d="M17.472 14.38c-.276-.138-1.634-.808-1.886-.9-.25-.092-.435-.138-.617.138-.184.276-.713.9-.875 1.084-.16.184-.32.207-.597.069-.276-.138-1.164-.43-2.217-1.37-.82-.733-1.374-1.639-1.536-1.914-.161-.277-.018-.426.12-.564.124-.125.275-.322.414-.483.137-.161.183-.276.275-.46.09-.184.045-.345-.022-.483-.069-.138-.617-1.488-.846-2.04-.223-.538-.45-.465-.616-.474-.16-.008-.344-.01-.527-.01-.183 0-.482.069-.734.345-.252.276-.963.94-1.926.94s-1.88.94-2.317 1.678c-.435.736-.046 1.817.803 2.508 1.492 1.218 3.031 1.93 4.156 2.392 1.125.462 1.125.783 1.905.736.78-.046 2.522-1.033 2.866-2.03.344-.997.344-1.85.241-2.03-.102-.178-.377-.282-.653-.42z"/>
+</svg>

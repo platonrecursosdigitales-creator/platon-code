@@ -17,56 +17,55 @@ export function SocialStatue() {
       className="absolute inset-0 w-full h-full pointer-events-none z-10 hidden lg:block overflow-visible"
     >
       {/* SVG Dotted Lines */}
-      <svg className="absolute inset-0 w-full h-full overflow-visible" preserveAspectRatio="none">
-        <g stroke="#2563eb" strokeWidth="3" strokeDasharray="0 10" fill="none" strokeLinecap="round">
-          {/* We originate from approx right: 15%, top: 50% (center of the statue) */}
-          {/* Instagram */}
-          <path d="M 85% 50% Q 75% 30% 70% 15%" />
-          {/* Facebook */}
-          <path d="M 85% 50% Q 88% 30% 90% 15%" />
-          {/* TikTok */}
-          <path d="M 85% 50% Q 90% 40% 95% 35%" />
-          {/* Google */}
-          <path d="M 85% 50% Q 80% 45% 75% 35%" />
-          {/* YouTube */}
-          <path d="M 85% 50% Q 75% 50% 68% 55%" />
-          {/* WhatsApp */}
-          <path d="M 85% 50% Q 90% 55% 95% 60%" />
-          {/* Gmail */}
-          <path d="M 85% 50% Q 80% 65% 75% 80%" />
+      <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <g stroke="#2563eb" strokeWidth="0.3" strokeDasharray="0 1.2" fill="none" strokeLinecap="round">
+          {/* Origin: x:80, y:60 */}
+          <path d="M 80 60 Q 70 40 65 20" /> {/* Instagram */}
+          <path d="M 80 60 Q 82 35 85 15" /> {/* Facebook */}
+          <path d="M 80 60 Q 90 50 92 40" /> {/* TikTok */}
+          <path d="M 80 60 Q 70 55 65 45" /> {/* Google */}
+          <path d="M 80 60 Q 70 62 60 65" /> {/* YouTube */}
+          <path d="M 80 60 Q 88 65 92 70" /> {/* WhatsApp */}
+          <path d="M 80 60 Q 78 75 75 85" /> {/* Gmail */}
         </g>
       </svg>
 
       {/* Icons at path ends */}
-      <IconBadge src={instagramIcon} top="15%" right="30%" />
-      <IconBadge src={facebookIcon} top="15%" right="10%" />
-      <IconBadge src={tiktokIcon} top="35%" right="5%" />
-      <IconBadge src={googleIcon} top="35%" right="25%" />
-      <IconBadge src={youtubeIcon} top="55%" right="32%" />
-      <IconBadge src={whatsappIcon} top="60%" right="5%" />
-      <IconBadge src={gmailIcon} top="80%" right="25%" />
+      <IconBadge src={instagramIcon} top="20%" right="35%" delay={0.2} />
+      <IconBadge src={facebookIcon} top="15%" right="15%" delay={0.4} />
+      <IconBadge src={tiktokIcon} top="40%" right="8%" delay={0.6} />
+      <IconBadge src={googleIcon} top="45%" right="35%" delay={0.8} />
+      <IconBadge src={youtubeIcon} top="65%" right="40%" delay={1.0} />
+      <IconBadge src={whatsappIcon} top="70%" right="8%" delay={1.2} />
+      <IconBadge src={gmailIcon} top="85%" right="25%" delay={1.4} />
 
       {/* Central Text Label */}
-      <div 
-        className="absolute bg-white/90 backdrop-blur-md border border-brand/20 shadow-xl rounded-2xl p-4 text-center min-w-[280px]"
-        style={{ top: '15%', right: '40%' }}
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 1.5, type: "spring" }}
+        className="absolute bg-white/95 backdrop-blur-md border border-brand/20 shadow-2xl rounded-2xl p-4 text-center min-w-[280px]"
+        style={{ top: '20%', right: '45%' }}
       >
          <h3 className="text-sm font-semibold text-ink/70 uppercase tracking-widest mb-1">Todo en un solo lugar</h3>
          <p className="font-display text-2xl font-bold text-brand leading-none">
            Tu sitio web por <br/>$3,600 mxn
          </p>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
 
-function IconBadge({ src, top, right }: { src: string, top: string, right: string }) {
+function IconBadge({ src, top, right, delay }: { src: string, top: string, right: string, delay: number }) {
   return (
-    <div 
+    <motion.div 
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ type: "spring", stiffness: 200, damping: 15, delay: 1 + delay }}
       className="absolute w-12 h-12 md:w-16 md:h-16 bg-white rounded-full shadow-xl border border-ink/5 flex items-center justify-center p-3 -translate-y-1/2 translate-x-1/2 hover:scale-110 transition-transform duration-300"
       style={{ top, right }}
     >
       <img src={src} className="w-full h-full object-contain" alt="Icon" />
-    </div>
+    </motion.div>
   );
 }
