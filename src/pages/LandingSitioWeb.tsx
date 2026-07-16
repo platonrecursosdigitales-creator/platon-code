@@ -39,10 +39,10 @@ import { SocialStatue } from "@/components/site/SocialStatue";
 import statueAthena from "@/assets/statue_athena.png";
 import statueApollo from "@/assets/statue_apollo.png";
 import statueHermes from "@/assets/statue_hermes.png";
-import portfolioMedina from "@/assets/portfolio_medina.png";
-import portfolioCaballero from "@/assets/portfolio_caballero.png";
-import portfolioSolec from "@/assets/portfolio_solec.png";
-import portfolioDental from "@/assets/portfolio_dental.png";
+import portfolioMedina from "@/assets/portfolio_medina_real.png";
+import portfolioCaballero from "@/assets/portfolio_caballero_real.png";
+import portfolioSolec from "@/assets/portfolio_solec_real.png";
+import portfolioDental from "@/assets/portfolio_dental_real.png";
 import { ExternalLink } from "lucide-react";
 import mockupImg from "@/assets/portfolio_mockup.png";
 
