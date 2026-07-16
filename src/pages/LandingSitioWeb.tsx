@@ -44,19 +44,19 @@ import portfolioCaballero from "@/assets/portfolio_caballero_real.png";
 import portfolioSolec from "@/assets/portfolio_solec_real.png";
 import portfolioDental from "@/assets/portfolio_dental_real.png";
 import { ExternalLink } from "lucide-react";
-import mockupImg from "@/assets/portfolio_mockup.png";
 
-import feat1 from "@/assets/statue_feature_1_1782446390064.png";
-import feat2 from "@/assets/statue_feature_2_1782446396960.png";
-import feat3 from "@/assets/statue_feature_3_1782446407391.png";
-import feat4 from "@/assets/statue_feature_4_1782446416347.png";
-import feat5 from "@/assets/statue_feature_5_1782446422681.png";
-import feat6 from "@/assets/statue_feature_6_1782446438896.png";
-import feat7 from "@/assets/statue_feature_7_1782446447372.png";
-import feat8 from "@/assets/statue_feature_8_1782446455249.png";
-import feat9 from "@/assets/statue_feature_9_1782446463174.png";
-import feat10 from "@/assets/statue_feature_10_1782446472623.png";
-import feat11 from "@/assets/statue_feature_11_1782446488110.png";
+
+
+
+
+
+
+
+
+
+
+
+
 
 const WHATSAPP_NUMBER = "5215668043332";
 const WHATSAPP_TEXT = "Hola, acabo de dejar mis datos y quiero avanzar con mi sitio web.";
